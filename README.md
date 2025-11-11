@@ -36,7 +36,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  subway https://www.subway.com/nl-NL/
+  amazing oriental https://amazingoriental.com/
   <!-- of Uniqlo/Loewe? -->
 
   #### Screenshot(s) van de eerste pagina (small screen): 
