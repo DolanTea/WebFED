@@ -37,17 +37,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
   subway https://www.subway.com/nl-NL/
-  <!-- of Uniqlo? -->
+  <!-- of Uniqlo/Loewe? -->
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/subway-homepage.png" width="375px" alt="homepagina van subway nederland">
+  <img src="readme-images/oriental-homepage.png" width="375px" alt="homepagina van amazing oriental nederland">
   <!-- Uniqlo hompage? -->
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/subway-catering.png" width="375px" alt="subway catering pagina nederland">
-  <!-- <img scr= "readme-images/subway-menu.png" width="375px" alt="subway menu pagina nederland"> -->
+  <img src="readme-images/oriental-recept-detail.png" width="375px" alt="amazing oriental recept detailpagina nederland">
   <!-- Uniqlo UT-collecties pagina-->
 </details>
 
