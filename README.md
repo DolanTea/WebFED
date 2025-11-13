@@ -37,17 +37,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
   amazing oriental https://amazingoriental.com/
-  <!-- of Uniqlo/Loewe? -->
+  
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
   <img src="readme-images/oriental-homepage.png" width="375px" alt="homepagina van amazing oriental nederland">
-  <!-- Uniqlo hompage? -->
+  
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
   <img src="readme-images/oriental-recept-detail.png" width="375px" alt="amazing oriental recept detailpagina nederland">
-  <!-- Uniqlo UT-collecties pagina-->
+  
 </details>
 
 
@@ -59,7 +59,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-
+  Homepage van oriental heeft een span in de html van 'vandaag ?' deze komt talloos keer vol in de heading list van de accesibility narrator. Meeste links zijn wel kloppend op 1 button na, sommige links lijken meer op een section & de volgorde van hiërarchie eerst 'bekijk dit artikel' dan pas het 'product'. Ook is in deze lijst geen hiërarchie en h1 is niet te vinden maar staat wel in de html.
+  De website is via wordpress opgezet waardoor niet alles semantisch is in de html.
+  De recept-yaki-onigiri heeft wel een hiërarchie van h-tags.
+  Bijna alle afbeeldingen beide pagina's hebben geen src alt text.
+  De shift-tab knop werkt niet helemaal zonder narrator? Je ziet links onder wel de url, maar geen outline waar je nu bevindt met narrator wel.
 </details>
 
 
