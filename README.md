@@ -74,7 +74,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/homepage-breakdown" width="375px" alt="breakdown van de hele homepage amazing oriental"
+  <img src="readme-images/homepage-breakdown" width="375px" alt="breakdown van de hele homepage amazing oriental">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/yaki-breakdown" width="375px" alt="breakdown van een recept pagina yaki onigiri amazing oriental">
