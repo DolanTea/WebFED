@@ -98,9 +98,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   1 De breakdownschets duurde langer dan verwacht maar bracht veel steun om alle content daarna in html te zetten. Bij mijn eerste versie twijfelde ik soms of het een article was maar echter bleek het een link te zijn omdat het gehele blokje naar een andere pagina hoort te brengen.
   Het zou een article kunnen zijn met a voor het hele article of via nav>ul>li>a omdat het navigeert.
   <img src="readme-images/readme-voortgang1-article-of-nav.png" width="375px" alt="screenshot gedeelte van homepagina amazing oriental">
+
   2 In mijn eerste poging om alle tekstuele content in html te zetten lukte form niet helemaal
   <img src="readme-images/readme-voortgang1-htmlpoging1.png" width="375px" alt="screenshot eigen html homepagina amazing oriental">
+
   3 In de tijd (19-11-2004) is de pagina veranderd aan afbeeldingen van de header en producten met tekst op de homepagina, ik had de vorige afbeeldingen nog niet gedownload dus moet deze opgezocht worden of mag het vervangen worden? Layout is hetzelde.
+  
   4 ik had tijdens mijn w3c validation een paar errors bij form action"" invullen en dat ik bij een section li als child had zonder ul als parent.
   <img src="readme-images/readme-voortgang1-w3c-validation.png" width="375px" alt="screenshot eigen html w3c validation errors">
 
