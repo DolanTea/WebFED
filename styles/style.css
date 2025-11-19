@@ -20,12 +20,57 @@
 }
 
 
+/********************/
+/* #GENERAL STYLING */
+/********************/
+/* Spring in met 2 spaties of 1 tab. */
+/* 5 Witregels tussen hoofdonderdelen.
+1 Witregel tussen secties  */
+/* Een grote titel (in commentaar) voor
+ieder hoofdonderdeel. */
+/* - Commentaar om complexere regels en
+stukken code uit te leggen */
+/* vaste schrijfstijl voor variablen en classes wordt met -streepjes */
+
+/* html {
+font-family:"Saira Condensed";
+}
+
+h1, h2, h3 {
+margin:0;
+font-size:1em;
+font-weight:400;
+} */
 
 
+
+
+
+/****************/
+/* #SLIDE-PANEL */
+/****************/
+.slide-panel {
+position:fixed;
+right:var(--size-chrome-main);
+bottom:var(--size-chrome-main);
+z-index:9999;
+display:flex;
+/* viewport width - 2x margin - button width */
+max-width:calc(100% - var(--size-chrome-main) * - var(--size-chrome-main));
+/* viewport height - 2x margin */
+max-height:calc(100% - var(--size-chrome-main) * 2);
+background-color:var(--color-background);
+filter:drop-shadow(
+calc(var(--size-chrome-sub) * .5)
+calc(var(--size-chrome-sub) * .5)
+calc(var(--size-chrome-sub) * 1)
+var(--color-shade-gray)
+);
+}
 
 /****************/
 /* JOUW STYLING */
 /****************/
-
+/* Ik wil de volgorde aanhouden op functioneel met streepjes-tussen voor overig */
 /* jouw code */
 

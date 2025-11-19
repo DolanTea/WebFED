@@ -64,6 +64,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   De recept-yaki-onigiri heeft wel een hiërarchie van h-tags.
   Bijna alle afbeeldingen beide pagina's hebben geen src alt text.
   De shift-tab knop werkt niet helemaal zonder narrator? Je ziet links onder wel de url, maar geen outline waar je nu bevindt met narrator wel.
+  <img src="readme-images/readme-headingsmap-oriental.png" width="375px" alt="screenshot headingsmap homepagina amazing oriental">
 </details>
 
 
@@ -74,14 +75,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/homepage-breakdown.png" width="375px" alt="breakdown van de hele homepage amazing oriental">
+  <img src="readme-images/homepage-breakdown.png" width="375px" alt="breakdown van de hele homepagina amazing oriental">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/yaki-breakdown.png" width="375px" alt="breakdown van een recept pagina yaki onigiri amazing oriental">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <!-- <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel"> -->
-  nvt.
+  <img src="readme-images/hamburger-nav-breakdown.png" width="375px" alt="breakdown van hamburger menu amazing oriental dynamisch deel">
 </details>
 
 
@@ -95,6 +95,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  1 De breakdownschets duurde langer dan verwacht maar bracht veel steun om alle content daarna in html te zetten. Bij mijn eerste versie twijfelde ik soms of het een article was maar echter bleek het een link te zijn omdat het gehele blokje naar een andere pagina hoort te brengen.
+  Het zou een article kunnen zijn met a voor het hele article of via nav>ul>li>a omdat het navigeert.
+  <img src="readme-images/readme-voortgang1-article-of-nav.png" width="375px" alt="screenshot gedeelte van homepagina amazing oriental">
+  2 In mijn eerste poging om alle tekstuele content in html te zetten lukte form niet helemaal
+  <img src="readme-images/readme-voortgang1-htmlpoging1.png" width="375px" alt="screenshot eigen html homepagina amazing oriental">
+  3 In de tijd (19-11-2004) is de pagina veranderd aan afbeeldingen van de header en producten met tekst op de homepagina, ik had de vorige afbeeldingen nog niet gedownload dus moet deze opgezocht worden of mag het vervangen worden? Layout is hetzelde.
+  4 ik had tijdens mijn w3c validation een paar errors bij form action"" invullen en dat ik bij een section li als child had zonder ul als parent.
+  <img src="readme-images/readme-voortgang1-w3c-validation.png" width="375px" alt="screenshot eigen html w3c validation errors">
 
 
   ### Agenda voor meeting
