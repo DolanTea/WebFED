@@ -1,0 +1,84 @@
+body {
+    font-family: var(--font);
+    background-color: var(--color-background);
+}
+
+
+/**************/
+/* Carousel homepagina */
+/**************/
+
+img {
+    max-width: 100%;
+}
+
+/* 
+    header > ul:first-of-type zorgt dat je de eerste <ul> binnen <header> pakt.
+    > li:first-child pakt de eerste <li> in die <ul>.
+    > a pakt de <a> binnen die <li>.
+    maar het pakt nu niet de afbeeldingen in een carousel en heeft nog list-style bullet points?
+*/
+header>ul:first-of-type>li:first-child>a {
+    margin: 0;
+    padding: 0;
+    list-style-type: "";
+
+    display: flex;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+
+    @media (prefers-reduced-motion:no-preference) {
+        scroll-behavior: smooth;
+    }
+
+    anchor-name: --carousel;
+}
+
+header>ul:first-of-type>li:first-child>a {
+    &::scroll-button(*) {
+        position: fixed;
+        position-anchor: --carousel;
+        position-visibility: always;
+        font-family: "Material Symbols Outlined";
+
+        width: 3em;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+
+        border: none;
+        color: white;
+        background-color: dodgerblue;
+    }
+
+    &::scroll-button(right) {
+        position-area: bottom;
+        content: '→' / 'Next';
+        justify-self: end;
+    }
+
+    &::scroll-button(left) {
+        position-area: bottom;
+        content: '←' / 'Previous';
+        justify-self: start;
+    }
+
+    &::scroll-button(*):disabled {
+        background-color: grey;
+    }
+}
+
+
+
+header>ul:first-of-type>li:first-child>a {
+    flex-basis: 100%;
+    flex-shrink: 0;
+
+    scroll-snap-align: center;
+}
+
+
+ul img {
+    display: block;
+}

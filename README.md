@@ -23,7 +23,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Je focus:
   responsive (kies uit responsive óf surface plane)
- 
 </details>
 
 
@@ -40,12 +39,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
+  homepagina van de amazing oriental nederland 
   <img src="readme-images/oriental-homepage.png" width="375px" alt="homepagina van amazing oriental nederland">
   
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+  recept pagina van yaki onigiri amazing oriental nederland 
   <img src="readme-images/oriental-recept-detail.png" width="375px" alt="amazing oriental recept detailpagina nederland">
   
 </details>
@@ -65,6 +64,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Bijna alle afbeeldingen beide pagina's hebben geen src alt text.
   De shift-tab knop werkt niet helemaal zonder narrator? Je ziet links onder wel de url, maar geen outline waar je nu bevindt met narrator wel.
   <img src="readme-images/readme-headingsmap-oriental.png" width="375px" alt="screenshot headingsmap homepagina amazing oriental">
+  Er is geen darkmode, veel divs met classes, weinig tab-focus.
 </details>
 
 
@@ -75,6 +75,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
+  <!-- content img header + producten zijn sinds 19-11-2025 veranderd -->
   <img src="readme-images/homepage-breakdown.png" width="375px" alt="breakdown van de hele homepagina amazing oriental">
 
   ### dynamisch deel (bijv menu): 
@@ -113,20 +114,29 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Stiene                                                    
+  | omdraaien titel & rondddraaiend grid          |           
+  | h2 en button & uit grid titel center          |                   
 
+  | Nicha
+  | aria-label active naar unactive               |
+  | grid netjes maken                             |
+
+  | Anne                                          |
+  | een element en dropdown button disable state  |
+
+  | Kasper                                        |
+  | Responsive accordion footer starbucks         |
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - | Stiene grid-column start en end oefenen h2 center plaatsen 
+  - | Dylan | emmet cheat sheet  carousel klikbare afbeeldingen | list-style-type:"" voor de screenreader nog een lijst met list-style:none niet screenreader vriendelijk | @media(prefers-reduced-motion: no-prefrence)
+  - : states :: dubbel over de content (voor firstletter etc.)
+  - | Kasper footer details summary accordion menu maken voor mobiel responsive voor grotere devices
+  - fonts in ::root is mooi maar mag font-face
+  - 3 stylesheets css, 1 algemeen custom properties special states, 1 voor iedere pagina en javascript voor hamburger menu bijv
 
 </details>
 
