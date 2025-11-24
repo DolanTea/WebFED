@@ -150,7 +150,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  1 mijn carousel lukte niet met het selecteren van css selectoren, na met Damian studentassistente erachter gekomen dat ik te ver hebt geselecteerd, het was "ul" in mijn code "header>ul:first-of-type>li:first-child>a", na de uitleg "header > ul:nth-of-type(1)"
+  2 oriental had veel font-face van nunito dit bleek te onnodig zijn omdat mijn pagina's niet de afwijken taal vietnamees/latijns heeft en kan ik veranderen in 5regels fontface ipv 400 ervan met allerlei verschillende font-weights.
+  3 Hamburger menu met Sanne, via de codepen had ik geprobeerd de code toe te passen aan mijn code alleen dit lukte nog niet omdat via de media scaling de plaatsing van het lijstje aan a's op 2 verschillende styling komt te staan. Het is gelukt en begrepen om de bovenste 4 te krijgen en het hamburger menu open en dicht klappen. Alleen de 2de ul lijst nu tussen het logo en search krijgen is voor mij nog een mysterie ik hoorde er voldoende van te snappen volgens Sanne.
+  <img src="readme-images/readme-voortgang2-hamburger.png" width="375px" alt="hamburger menu nadat sanne heeft geholpen">
+  <img src="readme-images/readme-voortgang2-hamburger-origineel.png" width="375px" alt="hoe het hamburger menu eruit moet zien">
 
 
   ### Agenda voor meeting

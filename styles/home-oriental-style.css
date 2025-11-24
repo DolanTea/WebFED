@@ -1,3 +1,101 @@
+/**************/
+/* Hamburger menu*/
+/**************/
+header{
+
+    position:sticky;
+    top:0;
+
+    display:flex;
+    gap:1em;
+    align-items: center;
+
+}
+
+header search{
+
+    flex-grow:1;
+
+}
+
+header search form input{
+
+    width:100%;
+
+}
+
+header h1{
+    
+    position:absolute;
+    left:-999em;
+}
+
+
+header nav{
+
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+
+  translate:-100%;
+  
+  
+  transition:0.3s;
+    
+  background-color: black;
+
+} 
+
+
+/* Hamburger menu open is */
+header nav.toonMenu {
+
+ translate: 0 0;
+  
+}
+
+/**************/
+/* Media hamburger menu weg 38em*/
+/**************/
+@media (min-width:38em){
+    header{
+        flex-wrap: wrap;
+        background-color: var(--color-background);
+    }
+    
+    header button{
+        display:none;
+    }
+    
+    header nav{
+        position:static;
+        translate:0;
+        display:contents;
+    }
+    
+    header ul:nth-of-type(1){
+        order:-1;
+        width:100%;
+
+        display:flex;
+        gap: 1em;
+        justify-content: end;
+    }
+    
+    header ul:nth-of-type(2){
+        order:-1;
+        width:100%;
+
+        display:flex;
+        gap: 1em;
+        justify-content:center;
+    }
+}
+
+
+
 body {
     font-family: var(--font);
     background-color: var(--color-background);
@@ -12,16 +110,13 @@ img {
     max-width: 100%;
 }
 
-/* 
-    header > ul:first-of-type zorgt dat je de eerste <ul> binnen <header> pakt.
-    > li:first-child pakt de eerste <li> in die <ul>.
-    > a pakt de <a> binnen die <li>.
-    maar het pakt nu niet de afbeeldingen in een carousel en heeft nog list-style bullet points?
-*/
-header>ul:first-of-type>li:first-child>a {
+
+
+main > ul:nth-of-type(1){
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style-type: "";
+    list-style-type: none;
 
     display: flex;
 
@@ -36,7 +131,10 @@ header>ul:first-of-type>li:first-child>a {
     anchor-name: --carousel;
 }
 
-header>ul:first-of-type>li:first-child>a {
+
+
+
+main > ul:nth-of-type(1) {
     &::scroll-button(*) {
         position: fixed;
         position-anchor: --carousel;
@@ -71,7 +169,7 @@ header>ul:first-of-type>li:first-child>a {
 
 
 
-header>ul:first-of-type>li:first-child>a {
+main > ul:nth-of-type(1) li{
     flex-basis: 100%;
     flex-shrink: 0;
 
