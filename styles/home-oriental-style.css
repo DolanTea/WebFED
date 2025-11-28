@@ -1,104 +1,133 @@
 /**************/
 /* Hamburger menu*/
 /**************/
-header{
+header {
 
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
 
-    display:flex;
-    gap:1em;
+    display: flex;
+    gap: 1em;
     align-items: center;
+    z-index: 1;
 
 }
 
-header search{
+header search {
 
-    flex-grow:1;
-
-}
-
-header search form input{
-
-    width:100%;
+    flex-grow: 1;
 
 }
 
-header h1{
-    
-    position:absolute;
-    left:-999em;
+header search form input {
+
+    width: 100%;
+
+}
+
+header h1 {
+
+    position: absolute;
+    left: -999em;
 }
 
 
-header nav{
+header nav {
 
-  position:fixed;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
-  translate:-100%;
-  
-  
-  transition:0.3s;
-    
-  background-color: black;
+    translate: -100%;
 
-} 
+
+    transition: 0.3s;
+
+    background-color: black;
+
+}
 
 
 /* Hamburger menu open is */
 header nav.toonMenu {
 
- translate: 0 0;
-  
+    translate: 0 0;
+
 }
 
 /**************/
 /* Media hamburger menu weg 38em*/
 /**************/
-@media (min-width:38em){
-    header{
+@media (min-width:33em) {
+    header {
+
         flex-wrap: wrap;
         background-color: var(--color-background);
-    }
-    
-    header button{
-        display:none;
-    }
-    
-    header nav{
-        position:static;
-        translate:0;
-        display:contents;
-    }
-    
-    header ul:nth-of-type(1){
-        order:-1;
-        width:100%;
 
-        display:flex;
+    }
+
+
+    header button {
+
+        display: none;
+
+    }
+
+    header nav {
+
+        position: static;
+        translate: 0;
+        display: contents;
+    }
+
+    header ul:nth-of-type(1) {
+
+        order: -1;
+        width: 100%;
+
+        display: flex;
         gap: 1em;
         justify-content: end;
     }
-    
-    header ul:nth-of-type(2){
-        order:-1;
-        width:100%;
 
-        display:flex;
+    header ul:nth-of-type(2) {
+
+        order: 1;
+        width: 100%;
+
+        display: flex;
         gap: 1em;
-        justify-content:center;
+        justify-content: center;
+        align-self: center;
+        flex-grow: 4;
+    }
+}
+
+
+@media (min-width:48em) {
+    header search {
+
+        order: 5;
+
+    }
+
+    header ul:nth-of-type(2) {
+
+        width: auto;
+
     }
 }
 
 
 
+
 body {
+
     font-family: var(--font);
     background-color: var(--color-background);
+
 }
 
 
@@ -106,13 +135,16 @@ body {
 /* Carousel homepagina */
 /**************/
 
-img {
+main>ul:nth-of-type(1) img {
+
     max-width: 100%;
+
 }
 
 
 
-main > ul:nth-of-type(1){
+main>ul:nth-of-type(1) {
+
     list-style: none;
     margin: 0;
     padding: 0;
@@ -134,8 +166,9 @@ main > ul:nth-of-type(1){
 
 
 
-main > ul:nth-of-type(1) {
+main>ul:nth-of-type(1) {
     &::scroll-button(*) {
+
         position: fixed;
         position-anchor: --carousel;
         position-visibility: always;
@@ -148,35 +181,218 @@ main > ul:nth-of-type(1) {
         border: none;
         color: white;
         background-color: dodgerblue;
+
     }
 
     &::scroll-button(right) {
+
         position-area: bottom;
         content: '→' / 'Next';
         justify-self: end;
+
     }
 
     &::scroll-button(left) {
+
         position-area: bottom;
         content: '←' / 'Previous';
         justify-self: start;
+
     }
 
     &::scroll-button(*):disabled {
+
         background-color: grey;
+
     }
 }
 
 
 
-main > ul:nth-of-type(1) li{
+main>ul:nth-of-type(1) li {
+
     flex-basis: 100%;
     flex-shrink: 0;
 
     scroll-snap-align: center;
+
 }
 
 
 ul img {
+
     display: block;
+
 }
+
+
+/**************/
+/* 3 links header*/
+/**************/
+main nav ul {
+
+    display: grid;
+    gap: 1em;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    background-color: var(--color-link-red);
+
+}
+
+
+
+
+
+
+
+
+/**************/
+/* Recept kaartjes links media:38em */
+/**************/
+@media (min-width:38em) {
+    main>h2 {
+
+        font-size: 2.125em;
+        line-height: 2.875em;
+        font-weight: 700;
+
+    }
+
+    main>section:nth-of-type(1) {
+
+        display: grid;
+        gap: 1em;
+
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    main>section:nth-of-type(1) h2 {
+
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+
+    }
+
+    section:nth-of-type(1)>article {
+
+        display: grid;
+        /* display:flex;
+        flex-direction: column; */
+
+    }
+
+    section:nth-of-type(1)>article a {
+
+        order: -1;
+
+    }
+
+    section:nth-of-type(1)>article a img {
+
+        /* deze images scaled niet mee met de grid als de h3 de hele breedte kan nemen */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    section:nth-of-type(1)>nav {
+
+        grid-column-start: -3;
+        grid-column-end: -2;
+        text-align: center;
+
+    }
+
+    /* section:nth-of-type(1) article p {
+        bottom:0;
+        margin:0;
+        
+    } */
+}
+
+/**************/
+/* Producten kaartjes*/
+/**************/
+
+
+@media (min-width:38em) {
+    main>h2 {
+
+        font-size: 2.125em;
+        line-height: 2.875em;
+        font-weight: 700;
+
+    }
+
+    section:nth-of-type(2) ul {
+
+        display: grid;
+        gap: 1em;
+
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+
+    section:nth-of-type(2) ul {
+
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+
+
+    }
+
+    section:nth-of-type(2) ul article {
+
+        display: grid;
+        justify-content: center;
+        background-color: pink;
+
+        /* display:flex;
+
+    }
+
+    section:nth-of-type(2) ul article a {
+
+        order: -1;
+
+    }
+
+    section:nth-of-type(2) article img {
+
+        /* deze images scaled niet mee met de grid als de h3 de hele breedte kan nemen */
+        object-fit: cover;
+        /* object-position: 50% 50%; */
+
+    }
+
+    section:nth-of-type(2) ul nav {
+
+        grid-column-start: -3;
+        grid-column-end: -2;
+        text-align: center;
+
+    }
+
+}
+
+/* section:nth-of-type(2) ul {
+
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+
+    section:nth-of-type(1)>nav {
+
+        grid-column-start: -4;
+        grid-column-end: -2;
+        text-align: center;
+
+    }

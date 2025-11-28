@@ -114,6 +114,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
+  | Dylan
+  | 
+
   | Stiene                                                    
   | omdraaien titel & rondddraaiend grid          |           
   | h2 en button & uit grid titel center          |                   
@@ -155,17 +158,31 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3 Hamburger menu met Sanne, via de codepen had ik geprobeerd de code toe te passen aan mijn code alleen dit lukte nog niet omdat via de media scaling de plaatsing van het lijstje aan a's op 2 verschillende styling komt te staan. Het is gelukt en begrepen om de bovenste 4 te krijgen en het hamburger menu open en dicht klappen. Alleen de 2de ul lijst nu tussen het logo en search krijgen is voor mij nog een mysterie ik hoorde er voldoende van te snappen volgens Sanne.
   <img src="readme-images/readme-voortgang2-hamburger.png" width="375px" alt="hamburger menu nadat sanne heeft geholpen">
   <img src="readme-images/readme-voortgang2-hamburger-origineel.png" width="375px" alt="hoe het hamburger menu eruit moet zien">
-
+  4 Mijn header kreeg ik de 2'de ul lijst niet tussen het logo en de search. Dit is uiteindelijk wel gelukt na 2x hulp vragen via Sanne. Poging 1: bracht mij tot de screenshot die je nu ziet. Poging 2: geleerd dat het toch wel zat aan de order maar het was niet zelf gelukt op de juiste css selector aan te wijzen & de width:100%
+  <img src="readme-images/readme-voortgang2-header.png">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  |Dylan
+  | grid kaartjes
+  | afbeelding scaling
 
+  | Stiene                                                    
+  | grid is kapot  |           
+  |                |                   
+
+  | Nicha
+  |                |
+  |                |
+
+  | Anne
+  | Een ul zowel verticaal als horizontaal plaatsen |
+
+  | Kasper
+  | Afsnijden van svg door font-size |
+  | SVG/Image in content zetten      |
+  | Kaart in section                 |
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
