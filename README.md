@@ -164,7 +164,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  |Dylan
+  | Dylan
   | grid kaartjes
   | afbeelding scaling
 
@@ -187,10 +187,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Stiene grid-column-start:-4 niet aangeraden maar moet justify-content:center zijn, custom properties voor font gebruiken 
+  - Anne grid-template-area meer losse namen geven
+  - Kasper Svg en titel in de footer wordt in een span gezet zodat je niet 2 elementen hebt maar wel de styling kan aanpassen via font-size wel aan sanne vragen voor pijltje svg want wat legaal is lastig te schatten voor de opdracht
+  - Dylan gebruik voor al je iconen svgs. Om elementen horizontaal op dezelfde hoogte te krijgen kun je volgens damian een div gebruiken met flex en align content center
+  - Nicha nintendo carousel ingewikkeld niet heel duidelijk wat legaal mag voor de opdracht 
+- 
 
 </details>
 
@@ -218,7 +220,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  1 Oriental gebruikte afbeeldingen in png als iconen dit heb ik convert naar svg's
+  <img src="readme-images/readme-voortgang3-png-svg.png">
+  2 ik had nog veel a-tags in mijn article maar dit moest andersom ook soms voor styling in de article. Het is a-tag>article>content met soms een div voor styling
+  3 sommige iconen ook gedownload als svg komen niet te weergeven in codepen of als bestand, is wit maar via inspect krijg je wel de svg en path enz. ik ben verward.
 
 
   ### Agenda voor meeting
@@ -279,8 +284,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
+  1. [bron 1] png naar svg via (https://convertio.co/nl/download/48d0a7c12c6d98b0e47de04de5fc94033c7342/)
+  2. bron 2 alternative svg's (https://icons.getbootstrap.com/?q=mail)
   3. ...
 
 </details>

@@ -1,4 +1,229 @@
+/****************/
+/* font & backgroundcolor */
+/****************/
+
 body {
     font-family: var(--font);
     background-color: var(--color-background);
 }
+
+
+
+
+
+
+
+/**************/
+/* Hamburger menu*/
+/**************/
+header {
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    z-index: 1;
+
+}
+
+/* of beide via nth-of-type 1 2 selecteren? */
+header>ul{
+
+    margin:0;
+
+}
+
+header search {
+
+    flex-grow: 1;
+
+}
+
+header search form input {
+
+    width: 100%;
+
+}
+
+header h1 {
+
+    position: absolute;
+    left: -999em;
+}
+
+
+header nav {
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    translate: -100%;
+
+
+    transition: 0.3s;
+
+    background-color: black;
+
+}
+
+
+/* Hamburger menu open is */
+header nav.toonMenu {
+
+    translate: 0 0;
+
+}
+
+
+
+
+
+
+/**************/
+/* Media hamburger menu weg 38em*/
+/**************/
+@media (min-width:33em) {
+    header {
+
+        flex-wrap: wrap;
+        background-color: var(--color-background);
+
+    }
+
+
+    header button {
+
+        display: none;
+
+    }
+
+    header nav {
+
+        position: static;
+        translate: 0;
+        display: contents;
+        
+    }
+
+    header ul:nth-of-type(1) {
+
+        order: -1;
+        width: 100%;
+
+        display: flex;
+        gap: 1em;
+        justify-content: end;
+
+        margin: 0;
+
+    }
+
+    header ul:nth-of-type(2) {
+
+        order: 1;
+        width: 100%;
+
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+        align-self: center;
+        flex-grow: 4;
+
+        margin: 0;
+        padding-bottom: .5em;
+
+    }
+}
+
+
+@media (min-width:48em) {
+    header search {
+
+        order: 5;
+
+    }
+
+    header ul:nth-of-type(2) {
+
+        width: auto;
+
+    }
+}
+
+
+
+
+
+
+
+/****************/
+/* svg sizing & placement*/
+/****************/
+svg {
+
+    width: 0.894em;
+    height: 1.75em;
+
+}
+
+figure {
+
+    margin: 0;
+    padding-top: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .5em;
+
+}
+
+
+main div {
+
+    display: flex;
+    align-content: center;
+
+}
+
+main div a {
+
+    font-size: var(--font-size--normal);
+
+    display: flex;
+    align-self: center;
+
+}
+
+
+
+
+
+/****************/
+/* background recept foto*/
+/****************/
+
+main article img {
+
+    max-width: 100%;
+
+}
+
+
+
+
+
+
+/****************/
+/* ingredienten */
+/****************/
+main section:nth-of-type(2){
+
+
+    border: 1px;
+    background-color: #e5e5e5;
+
+} 

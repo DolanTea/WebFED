@@ -13,6 +13,13 @@ header {
 
 }
 
+/* of beide via nth-of-type 1 2 selecteren? */
+header>ul{
+
+    margin:0;
+
+}
+
 header search {
 
     flex-grow: 1;
@@ -80,6 +87,7 @@ header nav.toonMenu {
         position: static;
         translate: 0;
         display: contents;
+        
     }
 
     header ul:nth-of-type(1) {
@@ -90,6 +98,9 @@ header nav.toonMenu {
         display: flex;
         gap: 1em;
         justify-content: end;
+
+        margin: 0;
+
     }
 
     header ul:nth-of-type(2) {
@@ -102,6 +113,10 @@ header nav.toonMenu {
         justify-content: center;
         align-self: center;
         flex-grow: 4;
+
+        margin: 0;
+        padding-bottom: .5em;
+
     }
 }
 
@@ -135,7 +150,8 @@ body {
 /* Carousel homepagina */
 /**************/
 
-main>ul:nth-of-type(1) img {
+/* main>ul:nth-of-type(1) */
+img {
 
     max-width: 100%;
 
@@ -277,7 +293,7 @@ main nav ul {
 
     }
 
-    section:nth-of-type(1)>article {
+    section:nth-of-type(1)>a {
 
         display: grid;
         /* display:flex;
@@ -285,37 +301,33 @@ main nav ul {
 
     }
 
-    section:nth-of-type(1)>article a {
+    section:nth-of-type(1)>a article {
 
         order: -1;
 
     }
 
-    section:nth-of-type(1)>article a img {
+    section:nth-of-type(1)>a article img {
 
         /* deze images scaled niet mee met de grid als de h3 de hele breedte kan nemen */
-        width: 100%;
+        max-width: 100%;
         object-fit: cover;
     }
 
-    section:nth-of-type(1)>nav {
-
-        grid-column-start: -3;
-        grid-column-end: -2;
-        text-align: center;
+    section:nth-of-type(1) a article div {
+        
+        display: flex;
+        align-items: center;
 
     }
-
-    /* section:nth-of-type(1) article p {
-        bottom:0;
-        margin:0;
-        
-    } */
 }
 
-/**************/
+
+
+
+/*******************************************/
 /* Producten kaartjes*/
-/**************/
+/******************************************/
 
 
 @media (min-width:38em) {
@@ -334,7 +346,7 @@ main nav ul {
 
         grid-template-rows: auto;
         grid-template-columns: 1fr 1fr 1fr;
-        
+
     }
 
     section:nth-of-type(2) ul {
@@ -352,8 +364,8 @@ main nav ul {
         justify-content: center;
         background-color: pink;
 
-        /* display:flex;
-
+        /* display:flex; */
+    
     }
 
     section:nth-of-type(2) ul article a {
@@ -396,3 +408,49 @@ main nav ul {
         text-align: center;
 
     }
+
+
+/****************/
+/* svg sizing & placement*/
+/****************/
+svg {
+
+    width: 1em;
+    height: 1em;
+
+}
+
+figure {
+
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding-top: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .5em;
+
+}
+
+main section div p {
+
+    display: flex;
+    align-self: center;
+
+}
+
+section:nth-of-type(3) {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+section:nth-of-type(7){
+
+    background-color: var(--color-background-functional);
+
+}

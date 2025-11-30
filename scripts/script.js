@@ -2,7 +2,7 @@
 console.log("hi");
 
 /******************************/
-/* menu openen de MENU button */
+/* hamburgermenu openen de MENU button */
 /******************************/
 
 // stap 1: zoek de menu-button op en sla die op in een variabele
@@ -22,7 +22,7 @@ function openMenu() {
 
 
 /************************************/
-/* menu sluiten met de sluit button */
+/* hamburgermenu sluiten met de sluit button */
 /************************************/
 
 // stap 1 - zoek sluiten button op

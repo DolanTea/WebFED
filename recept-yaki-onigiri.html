@@ -8,61 +8,194 @@
 
     <link href="styles/style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="styles/recept-yaki-onigiri-style.css">
+
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
 <body>
     <header>
+
         <h1>Recept pagina Yaki Onigiri (Japanse Gegrilde Rijstenballen)</h1>
-        <form action="/" method="get">
-            <input type="search" name="query" placeholder="waar ben je opzoek naar?">
-        </form>
+
+
+        <!-- logo oriental -->
+        <a href="index.html">
+            <img src="images/oriental-logo-mobile.png" alt=" klikbaar amazing oriental logo mobiel">
+        </a>
+
+        <!-- zoekbalk oriental met svg nog toevoegen -->
+        <search>
+            <form action="search-input" method="get">
+                <input type="search" name="query" placeholder="waar ben je opzoek naar?">
+            </form>
+        </search>
+
+        <!-- hamburger menu -->
+        <button aria-hidden="true"><img src="https://assets.codepen.io/274456/ui-icon-hamburger.svg"
+                alt="3 witte streepjes UI hamburger menu " />Menu</button>
+
+        <nav>
+            <button>x</button>
+            <ul>
+                <li><a href="#">Ons assortiment</a></li>
+                <li><a href="#">Aanbiedingen</a></li>
+                <li><a href="#">Bestel je eten</a></li>
+                <li><a href="#">Recepten</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">Winkels & openingstijden</a></li>
+                <li><a href="#">Webshop</a></li>
+                <li><a href="#">Vacatures</a></li>
+                <li><a href="#">Klantenservice</a></li>
+            </ul>
+        </nav>
+
+
     </header>
 
 
     <main>
+
+        <!-- dus mag dit in een nav of div of toch geen van beide? -->
+        <!-- klopt de manier van svg? dit heb ik gekregen via de svg slepen in codepen en vervolgens kopieren en naschrijven van de slide in de les -->
+        <div>
+
+            <figure>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.000000 28.000000"
+                    preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,28.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M65 210 l-69 -70 69 -70 c38 -38 73 -70 78 -70 4 0 10 7 14 16 4 10
+							-12 34 -48 70 l-53 54 53 54 c36 36 52 60 48 70 -4 9 -10 16 -14 16 -5 0 -40
+							-31 -78 -70z" />
+                    </g>
+                </svg>
+                <figcaption>terug pijlje naar links</figcaption>
+            </figure>
+
+            <a href="index.html">Terug</a>
+
+        </div>
+
+        <!-- geheel recept content -->
         <article>
-            <h2>(afbeelding naam)</h2>
-            <nav>
-                <a href="index.html">terug</a>
-            </nav>
-            <img src="#" alt="3 Yaki Onigiri op een vierkant schaal">
+            <h2>Bereidingswijze</h2>
+
+            <!-- geen background img want het hoort bij de content en je kan het uitprinten (het geheel recept) -->
+            <img src="images/bg-yaki-onigiri-recept" alt="3 Yaki Onigiri op een vierkant schaal">
 
             <section>
                 <h2>Yaki Onigiri (Japanse Gegrilde Rijstenballen)</h2>
                 <p>Japanse keuken</p>
                 <ul>
-                    <!-- png iconen downloaden van website -->
-                    <li><img src="#" alt="" aria-hidden="true"> Bijgerecht</li>
-                    <li><img src="#" alt="" aria-hidden="true"> 36</li>
-                    <li><img src="#" alt="" aria-hidden="true"> Totale tijd 45 minuten</li>
+                    <!-- png iconen downloaden van website en in svg veranderen -->
+                    <li>
+                        <!-- width="44.000000pt" height="39.000000pt" -->
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.000000 39.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,39.000000) scale(0.100000,-0.100000)" fill="#000000"
+                                stroke="none">
+                                <path d="M194 375 c-4 -8 -4 -22 0 -30 4 -12 -5 -15 -53 -15 -40 0 -63 -5 -71
+                                        -15 -11 -13 7 -15 150 -15 143 0 161 2 150 15 -8 10 -31 15 -70 15 -54 0 -58
+                                        1 -53 21 9 33 -41 56 -53 24z" />
+                                <path d="M12 258 c-20 -20 -14 -48 13 -60 23 -10 25 -16 25 -83 0 -62 3 -74
+                                        23 -93 21 -20 34 -22 148 -22 118 0 127 1 147 23 18 19 22 35 22 94 0 65 2 71
+                                        25 81 27 12 33 40 13 60 -17 17 -399 17 -416 0z m38 -28 c0 -5 -4 -10 -10 -10
+                                        -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z m360 0 c0 -5 -4 -10 -10
+                                        -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z" />
+                            </g>
+                        </svg>
+
+                        <p>Bijgerecht</p>
+
+                    </li>
+
+
+                    <li>
+                        <!-- width="54.000000pt" height="30.000000pt" -->
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.000000 30.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,30.000000) scale(0.100000,-0.100000)" fill="#000000"
+                                stroke="none">
+                                <path d="M219 281 c-29 -23 -31 -81 -4 -111 27 -30 78 -27 104 6 28 35 26 69
+                                        -4 99 -29 30 -64 32 -96 6z" />
+                                <path d="M72 274 c-28 -19 -30 -74 -4 -97 42 -38 102 -8 102 51 0 32 -29 62
+                                        -60 62 -9 0 -26 -7 -38 -16z" />
+                                <path d="M380 270 c-41 -41 -14 -110 42 -110 55 0 81 77 38 112 -29 23 -55 23
+                                        -80 -2z" />
+                                <path d="M50 137 c-30 -15 -50 -52 -50 -94 l0 -33 59 0 59 0 6 34 c4 19 16 46
+                                        28 61 17 22 19 29 7 36 -20 13 -80 11 -109 -4z" />
+                                <path d="M372 143 c-9 -3 -7 -12 9 -34 11 -16 23 -45 26 -64 l6 -35 58 0 59 0
+                                        0 36 c0 46 -14 70 -50 89 -28 15 -82 19 -108 8z" />
+                                <path d="M197 109 c-21 -12 -47 -61 -47 -89 0 -19 6 -20 115 -20 l115 0 0 31
+                                        c0 20 -10 40 -29 60 -25 25 -37 29 -83 29 -29 0 -61 -5 -71 -11z" />
+                            </g>
+                        </svg>
+
+                        <p>6</p>
+                    </li>
+
+
+                    <li>
+                        <!-- width="44.000000pt" height="38.000000pt" -->
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 44.000000 38.000000" preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,38.000000) scale(0.100000,-0.100000)" fill="#000000"
+                                stroke="none">
+                                <path d="M115 366 c-47 -20 -102 -88 -110 -135 -11 -66 3 -119 44 -164 61 -68
+                                        136 -85 217 -48 49 22 59 35 40 51 -12 9 -20 8 -41 -6 -39 -25 -116 -24 -151
+                                        2 -50 37 -69 72 -69 124 0 106 114 180 205 133 40 -21 80 -75 80 -109 0 -19
+                                        -5 -24 -27 -24 l-28 0 43 -42 42 -43 42 43 43 42 -31 0 c-29 0 -33 4 -43 44
+                                        -28 110 -155 176 -256 132z" />
+                                <path d="M180 232 c0 -44 -3 -49 -35 -66 -19 -11 -35 -25 -35 -33 0 -19 15
+                                        -16 60 12 39 24 40 27 40 80 0 42 -3 55 -15 55 -11 0 -15 -12 -15 -48z" />
+                            </g>
+                        </svg>
+
+                        <p>Totale tijd 45 minuten</p>
+
+                    </li>
                 </ul>
                 <button>Print</button>
             </section>
 
 
+            <!-- ingredienten -->
+        <section>
             <section>
                 <h2>Ingrediënten</h2>
 
                 <h3>Rijst</h3>
                 <p>3 Kopjes Rakki sushirijst</p>
                 <p>3 kopjes water</p>
+            </section>
 
+            <section>
                 <h3>Rijstmix</h3>
                 <p>3 el Tai Hua premium lichte sojasaus</p>
                 <p>1 el suiker</p>
                 <p>1 el Chee Seng pure sesamolie</p>
                 <p>¼ tl zout</p>
+            </section>
 
+            <section>
                 <h3>Sojasausmix</h3>
                 <p>1 el Tai Hua premium lichte sojasaus</p>
                 <p>1 tl Chee Seng pure sesamolie</p>
+            </section>
 
+            <section>
                 <h3>Extra benodigheden</h3>
                 <p>Onigiri mal</p>
                 <p>Zeewiervellen (optioneel)</p>
                 <p>Diepe pan of rijstkoker</p>
             </section>
+        </section>
 
 
             <section>
@@ -174,6 +307,8 @@
         </article>
     </main>
 
+
+    <!-- footer aanmelden & social links -->
     <script defer src="scripts/script.js"></script>
     <footer>
         <section>
@@ -198,14 +333,14 @@
         </nav>
         <nav>
             <h2>Snel naar</h2>
-			<ul>
-				<li><a href="#">Producten</a></li>
-				<li><a href="#">Aanbiedingen</a></li>
-				<li><a href="#">Bestel je eten</a></li>
-				<li><a href="#">Recepten</a></li>
-				<li><a href="#">Winkels</a></li>
-				<li><a href="#">Agenda</a></li>
-			</ul>
+            <ul>
+                <li><a href="#">Producten</a></li>
+                <li><a href="#">Aanbiedingen</a></li>
+                <li><a href="#">Bestel je eten</a></li>
+                <li><a href="#">Recepten</a></li>
+                <li><a href="#">Winkels</a></li>
+                <li><a href="#">Agenda</a></li>
+            </ul>
         </nav>
         <nav>
             <h2>Inspiratie</h2>

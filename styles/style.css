@@ -2,9 +2,9 @@
 /* Font */
 /*********************/
 @font-face {
-  font-family: 'Nunito';
-  font-display: swap;
-  src: url(/fonts/Nunito.ttf) format('truetype');
+	font-family: 'Nunito';
+	font-display: swap;
+	src: url(/fonts/Nunito.ttf) format('truetype');
 }
 
 
@@ -15,8 +15,10 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
 
@@ -38,20 +40,23 @@
 
 
 	/* colors */
-	--color-text:#000;
-	--color-text-links:#fff;
-	
-	--color-background:#fafafa;;
-	--color-background-functional:#6cb32f;
-	--color-background-werken:#75a8c6;
-	--color-background-foodcorner:#f26aac;
+	--color-text: #000;
+	--color-text-links: #fff;
 
+	--color-background: #fafafa;
 	
-	--color-link-red:#cf2e2e;
-	--color-link-green:#6cb32f;
-	--color-link-yellow:#fcb900;
-	
-	/* gradient */
+	--color-background-functional: #6cb32f;
+	--color-background-werken: #75a8c6;
+	--color-background-foodcorner: #f26aac;
+
+	/* link colors */
+	--color-link-red: #cf2e2e;
+	--color-link-green: #6cb32f;
+	--color-link-yellow: #fcb900;
+
+	--link-color:green;
+  	--inverse-color:black;
+
 }
 
 
@@ -73,7 +78,7 @@ stukken code uit te leggen */
 /* vaste schrijfstijl voor variablen en classes wordt met -streepjes */
 
 html {
-font-family:"Nunito","sans-serif";
+	font-family: "Nunito", "sans-serif";
 }
 
 /* h1, h2, h3 {
@@ -90,22 +95,17 @@ font-weight:400;
 /* #SLIDE-PANEL */
 /****************/
 .slide-panel {
-position:fixed;
-right:var(--size-chrome-main);
-bottom:var(--size-chrome-main);
-z-index:9999;
-display:flex;
-/* viewport width - 2x margin - button width */
-max-width:calc(100% - var(--size-chrome-main) * - var(--size-chrome-main));
-/* viewport height - 2x margin */
-max-height:calc(100% - var(--size-chrome-main) * 2);
-background-color:var(--color-background);
-filter:drop-shadow(
-calc(var(--size-chrome-sub) * .5)
-calc(var(--size-chrome-sub) * .5)
-calc(var(--size-chrome-sub) * 1)
-var(--color-shade-gray)
-);
+	position: fixed;
+	right: var(--size-chrome-main);
+	bottom: var(--size-chrome-main);
+	z-index: 9999;
+	display: flex;
+	/* viewport width - 2x margin - button width */
+	max-width: calc(100% - var(--size-chrome-main) * - var(--size-chrome-main));
+	/* viewport height - 2x margin */
+	max-height: calc(100% - var(--size-chrome-main) * 2);
+	background-color: var(--color-background);
+	filter: drop-shadow(calc(var(--size-chrome-sub) * .5) calc(var(--size-chrome-sub) * .5) calc(var(--size-chrome-sub) * 1) var(--color-shade-gray));
 }
 
 /****************/
@@ -114,22 +114,51 @@ var(--color-shade-gray)
 /* Ik wil de volgorde aanhouden op functioneel met streepjes-tussen voor overig */
 /* jouw code */
 
-header{
+header {
 	position: sticky;
 
 }
 
 a {
-    outline: none;
-    text-decoration: none;
-    color: inherit;
+	outline: none;
+	text-decoration: none;
+	color: inherit;
 }
 
 li {
-  list-style-type: none;
+	list-style-type: none;
+}
+
+
+/****************/
+/* figcaption weghalen */
+/****************/
+figcaption {
+	position: absolute;
+	left: -999em;
 }
 
 
 /****************/
 /* States */
 /****************/
+/************/
+/* Steelers style link */
+/************/
+a{
+  text-decoration:none;
+  transition: .5s;
+}
+
+/* hover en focus */
+a:is(:hover, :focus-visible) {
+  color:var(--inverse-color);
+  box-shadow: inset 0 -1.5em 0 var(--link-color);
+	/* inset plaats de bix-shaodw in het element */
+	/* 1.5em is de hoogte (line-height) van de a */
+}
+
+/* active */
+a:active {
+  --link-color:var(--accent-color);
+}
