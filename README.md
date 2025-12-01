@@ -224,7 +224,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/readme-voortgang3-png-svg.png">
   2 ik had nog veel a-tags in mijn article maar dit moest andersom ook soms voor styling in de article. Het is a-tag>article>content met soms een div voor styling
   3 sommige iconen ook gedownload als svg komen niet te weergeven in codepen of als bestand, is wit maar via inspect krijg je wel de svg en path enz. ik ben verward.
-
+  4 mijn grid kaartjes leken nog niet op hetzelfde van de website, dus ik heb de oefening 2 gridkaartjes opnieuw gedaan om meer ervan te begrijpen dit is nogal...vaag want ik zie die getallen niet echt voor mij voor de grids
 
   ### Agenda voor meeting
   samen met je groepje opstellen

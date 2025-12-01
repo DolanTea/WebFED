@@ -14,9 +14,9 @@ header {
 }
 
 /* of beide via nth-of-type 1 2 selecteren? */
-header>ul{
+header>ul {
 
-    margin:0;
+    margin: 0;
 
 }
 
@@ -61,7 +61,7 @@ header nav {
 header nav.toonMenu {
 
     translate: 0 0;
-
+    color: white
 }
 
 /**************/
@@ -87,7 +87,7 @@ header nav.toonMenu {
         position: static;
         translate: 0;
         display: contents;
-        
+
     }
 
     header ul:nth-of-type(1) {
@@ -138,6 +138,11 @@ header nav.toonMenu {
 
 
 
+
+
+/**************/
+/* body font & backgroundcolor */
+/**************/
 body {
 
     font-family: var(--font);
@@ -146,14 +151,18 @@ body {
 }
 
 
+
+
+
+
+
 /**************/
 /* Carousel homepagina */
 /**************/
 
-/* main>ul:nth-of-type(1) */
-img {
+main>ul:nth-of-type(1) img {
 
-    max-width: 100%;
+    width: 100%;
 
 }
 
@@ -161,7 +170,6 @@ img {
 
 main>ul:nth-of-type(1) {
 
-    list-style: none;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -229,9 +237,7 @@ main>ul:nth-of-type(1) li {
 
     flex-basis: 100%;
     flex-shrink: 0;
-
     scroll-snap-align: center;
-
 }
 
 
@@ -256,6 +262,11 @@ main nav ul {
 
 }
 
+main nav:nth-of-type(1) {
+
+    color: white;
+
+}
 
 
 
@@ -263,6 +274,9 @@ main nav ul {
 
 
 
+/* 3 media queries voor groot scherm dat alle 3 naast elkaar komt te staan met wit ruimte */
+/* 2de voor dat bij een tussen formaat dat de recept 2 naast elkaar gaan staan */
+/* kleinste dat het op een rij komt te staan */
 /**************/
 /* Recept kaartjes links media:38em */
 /**************/
@@ -282,6 +296,11 @@ main nav ul {
 
         grid-template-rows: auto;
         grid-template-columns: 1fr 1fr 1fr;
+
+        /* display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.25em;
+        align-items: stretch; */
 
     }
 
@@ -304,23 +323,37 @@ main nav ul {
     section:nth-of-type(1)>a article {
 
         order: -1;
+        display:grid;
+        grid-template-rows: 1fr 30% max-content;
 
     }
 
     section:nth-of-type(1)>a article img {
 
         /* deze images scaled niet mee met de grid als de h3 de hele breedte kan nemen */
-        max-width: 100%;
-        object-fit: cover;
+        /* width: 100%;
+        object-fit: cover; */
+
+        width:100%;
+        height:auto;
+        align-self:center;
+        object-fit:cover;
+        /* de default (inline) van img's overschrijven */
+        display:block;
+        order:-1;
+
     }
 
-    section:nth-of-type(1) a article div {
-        
+    section:nth-of-type(1) a article p {
+
         display: flex;
         align-items: center;
 
     }
 }
+
+
+
 
 
 
@@ -349,14 +382,6 @@ main nav ul {
 
     }
 
-    section:nth-of-type(2) ul {
-
-        grid-column-start: 1;
-        grid-column-end: 4;
-        text-align: center;
-
-
-    }
 
     section:nth-of-type(2) ul article {
 
@@ -364,8 +389,12 @@ main nav ul {
         justify-content: center;
         background-color: pink;
 
+
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
         /* display:flex; */
-    
+
     }
 
     section:nth-of-type(2) ul article a {
@@ -377,8 +406,15 @@ main nav ul {
     section:nth-of-type(2) article img {
 
         /* deze images scaled niet mee met de grid als de h3 de hele breedte kan nemen */
-        object-fit: cover;
+        /* object-fit: cover; */
         /* object-position: 50% 50%; */
+        width:100%;
+        height:auto;
+        align-self:center;
+        object-fit:cover;
+        /* de default (inline) van img's overschrijven */
+        display:block;
+
 
     }
 
@@ -449,7 +485,7 @@ section:nth-of-type(3) {
 }
 
 
-section:nth-of-type(7){
+section:nth-of-type(7) {
 
     background-color: var(--color-background-functional);
 
