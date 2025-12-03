@@ -40,9 +40,10 @@
 
 
 	/* colors */
-	--color-text: #000;
-	--color-text-links: #fff;
+	--color-text-black: #000;
+	--color-text-white: #fff;
 
+	--color-card: #fff;
 	--color-background: #fafafa;
 	
 	--color-background-functional: #6cb32f;
@@ -56,6 +57,7 @@
 
 	--link-color:green;
   	--inverse-color:black;
+	--accent-color:#fcb900;
 
 }
 
@@ -130,6 +132,11 @@ li {
 }
 
 
+
+
+
+
+
 /****************/
 /* figcaption weghalen */
 /****************/
@@ -139,12 +146,15 @@ figcaption {
 }
 
 
+
+
+
+
+
 /****************/
-/* States */
+/* States steelers style*/
 /****************/
-/************/
-/* Steelers style link */
-/************/
+
 a{
   text-decoration:none;
   transition: .5s;
@@ -161,4 +171,31 @@ a:is(:hover, :focus-visible) {
 /* active */
 a:active {
   --link-color:var(--accent-color);
+}
+
+
+
+
+
+/****************/
+/* svg sizing & placement*/
+/****************/
+svg {
+
+    width: 1em;
+    height: 1em;
+
+}
+
+figure {
+
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding-top: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .5em;
+
 }

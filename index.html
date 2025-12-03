@@ -20,7 +20,7 @@
 
 		<!-- logo oriental -->
 		<a href="#">
-			<img src="images/oriental-logo-mobile.png" alt=" klikbaar amazing oriental logo mobiel">
+			<img src="images/logo_amazing_oriental.jpg" alt=" klikbaar amazing oriental logo mobiel">
 		</a>
 
 		<!-- zoekbalk oriental met svg nog toevoegen -->
@@ -50,6 +50,7 @@
 				<li><a href="#">Klantenservice</a></li>
 			</ul>
 		</nav>
+
 
 	</header>
 
@@ -121,8 +122,6 @@
 		<!-- Recept kaartjes -->
 		<!-- section 1 -->
 		<section>
-			<!-- Of zijn dit ook een nav met een ul's? -->
-			<!-- voortgang 2 de div zijn voor styling, gebruik voor al je iconen svgs. Om elementen horizontaal op dezelfde hoogte te krijgen kun je volgens damian een div gebruiken met flex en align content center -->
 			<h2>Wat eten we vandaag?</h2>
 
 			<a href="recept-yaki-onigiri.html">
@@ -132,18 +131,18 @@
 
 					<img src="images/yaki-onigiri.jpg" alt="3 gegrilde Japanse rijstenballen op een bord">
 
-						<p>
-						<figure>
-							<?xml version="1.0" encoding="UTF-8"?>
-							<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-								<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-							</svg>
-							<figcaption>klok icoon dat 5 uur aanwijst</figcaption>
-						</figure>
+
+					<!-- er mag geen figure in de p want dan komt het in inspect niet op dezelfde positie p-figure-text-p dus moet hier een arialabel? -->
+					<p>
+						<?xml version="1.0" encoding="UTF-8"?>
+						<svg role="svg" aria-label="getekend klok die 5 uur aanwijst" version="1.1"
+							xmlns="http://www.w3.org/2000/svg">
+							<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+							<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+						</svg>
+
 						45 minuten
-						</p>
+					</p>
 
 				</article>
 
@@ -160,15 +159,14 @@
 
 
 					<p>
-					<figure>
+
 						<?xml version="1.0" encoding="UTF-8"?>
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
 							<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
 							<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
 						</svg>
-						<figcaption>klok icoon dat 5 uur aanwijst</figcaption>
-					</figure>
-					25 minuten
+
+						25 minuten
 					</p>
 
 				</article>
@@ -183,18 +181,16 @@
 						alt="een kom met spicy crab visballen in romige saus">
 
 
-					<!-- sanne navragen aanspreken via flex DIV MAG NIET -->
+
 
 					<p>
-					<figure>
 						<?xml version="1.0" encoding="UTF-8"?>
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
 							<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
 							<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
 						</svg>
-						<figcaption>klok icoon dat 5 uur aanwijst</figcaption>
-					</figure>
-					25 minuten
+
+						25 minuten
 					</p>
 				</article>
 
@@ -215,12 +211,18 @@
 
 			<!-- moeten de a gestyled als buttons in de a kan dit? -->
 			<!-- of moet het een p zijn gestyled als een button dat navigeert naar de desbetreffende pagina -->
+			<!-- hoe maak ik die korting blokje, section en 3 p's in de article of 3 losse p's? -->
 			<ul>
 				<li>
 					<a href="#">
 						<article>
 							<h2>All Groo</h2>
 							<img src="images/all-groo.png" alt="verpakte ramen noodles in een groene doos">
+							<section>
+								<p>3,79</p>
+								<p>2,69</p>
+								<p>per pak</p>
+							</section>
 							<p>All Groo Fresh Ramen Noodles 600g</p>
 							<p>Bekijk dit artikel</p>
 						</article>
@@ -231,6 +233,11 @@
 						<article>
 							<h2>Easybab</h2>
 							<img src="images/easybab.png" alt="kom met noodles champignions en een ei in het midden">
+							<section>
+								<p>2,35</p>
+								<p>1,65</p>
+								<p>per pak</p>
+							</section>
 							<p>Easybab Woori Bibimbap with Mushroom 100g</p>
 							<p>Bekijk dit artikel</p>
 						</article>
@@ -241,6 +248,11 @@
 						<article>
 							<h2>Golden Diamond</h2>
 							<img src="images/golden-diamond.png" alt="rode bollen fruit met groene bladeren">
+							<section>
+								<p>2,15</p>
+								<p>1,69</p>
+								<p>per pak</p>
+							</section>
 							<p>Golden Diamond Arbutus in Syrup 567g</p>
 							<p>Bekijk dit artikel</p>
 						</article>
@@ -251,6 +263,11 @@
 						<article>
 							<h2>Hikari Miso</h2>
 							<img src="images/hikari-miso.png" alt="verpakking met een kom fried tofu misu">
+							<section>
+								<p>4,35</p>
+								<p>2,99</p>
+								<p>per pak</p>
+							</section>
 							<p>Hikari Miso Instant miso Soup Abura Age Friend Tofu 8pc 155,2g</p>
 							<p>Bekijk dit artikel</p>
 						</article>
@@ -262,6 +279,11 @@
 							<h2>Prao Hom</h2>
 							<img src="images/prao-hom.png"
 								alt="kokosmelk met een man die een duimpje geef op de verpakking">
+							<section>
+								<p>1,89</p>
+								<p>1,49</p>
+								<p>per pak</p>
+							</section>
 							<p>Prao Hom Cocoonut Milk 17-19% 400ml</p>
 							<p>Bekijk dit artikel</p>
 						</article>
@@ -272,6 +294,11 @@
 						<article>
 							<h2>Garden</h2>
 							<img src="images/garden-butter-rolls.png" alt="holle butter roll sticks">
+							<section>
+								<p>6,65</p>
+								<p>4,99</p>
+								<p>per pak</p>
+							</section>
 							<p>Garden Butter Rolls 340g</p>
 							<p>Bekijk dit artikel</p>
 						</article>
@@ -282,6 +309,11 @@
 						<article>
 							<h2>Crystal Spring</h2>
 							<img src="images/crystal-spring.png" alt="crystal spring perzik thee">
+							<section>
+								<p>1,45</p>
+								<p>0,99</p>
+								<p>per pak</p>
+							</section>
 							<p>Crystal Spring Peach Tea 330ml</p>
 							<p>Bekijk dit artikel</p>
 						</article>
@@ -292,6 +324,11 @@
 						<article>
 							<h2>Gold Kili</h2>
 							<img src="images/gold-kili.png" alt="matcha latte met ginger verpakking">
+							<section>
+								<p>4,49</p>
+								<p>3,79</p>
+								<p>per pak</p>
+							</section>
 							<p>Gold Kili Instant Matcha Ginger Latte 10x25g</p>
 							<p>Bekijk dit artikel</p>
 						</article>
@@ -308,7 +345,7 @@
 		<!-- vacature + foodcorner -->
 		<section>
 			<!-- er is geen h2 voor deze sectie maar voor toegankelijkheid dan een h2? -->
-			<h2></h2>
+			<h2>Werken of bestellen?</h2>
 			<!-- de afbeeldingen zijn background images? -->
 
 			<a href="#">Bekijk onze vacatures
@@ -368,7 +405,6 @@
 		<!-- aanmelden nieuwsbrief -->
 		<section>
 
-
 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
 				viewBox="0 0 16 16">
 				<path
@@ -384,6 +420,7 @@
 				<input type="email" id="email" name="email" required>
 				<input type="submit" value="Aanmelden">
 			</form>
+
 		</section>
 
 	</main>
@@ -417,18 +454,25 @@
 				<li><a href="#"></a>wechat image naar qr code</li>
 			</ul>
 		</nav>
-		<nav>
-			<h2>Snel naar</h2>
-			<ul>
-				<li><a href="#">Producten</a></li>
-				<li><a href="#">Aanbiedingen</a></li>
-				<li><a href="#">Bestel je eten</a></li>
-				<li><a href="#">Recepten</a></li>
-				<li><a href="#">Winkels</a></li>
-				<li><a href="#">Agenda</a></li>
-			</ul>
-		</nav>
-		<nav>
+
+		<details>
+			<summary></summary>
+				<nav>
+					<h2>Snel naar</h2>
+					<ul>
+						<li><a href="#">Producten</a></li>
+						<li><a href="#">Aanbiedingen</a></li>
+						<li><a href="#">Bestel je eten</a></li>
+						<li><a href="#">Recepten</a></li>
+						<li><a href="#">Winkels</a></li>
+						<li><a href="#">Agenda</a></li>
+					</ul>
+				</nav>
+		</details>
+
+		<details>
+			<summary></summary>
+					<nav>
 			<h2>Inspiratie</h2>
 			<ul>
 				<li><a href="#">Chinees nieuwjaar</a></li>
@@ -438,6 +482,9 @@
 				<li><a href="#">Barbecue</a></li>
 			</ul>
 		</nav>
+		</details>
+
+
 		<nav>
 			<h2>Amazing Oriental</h2>
 			<ul>

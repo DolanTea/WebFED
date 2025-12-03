@@ -1,4 +1,28 @@
 /**************/
+/* logo */
+/**************/
+
+/* mobiel logo */
+header a:nth-of-type(1) img {
+
+
+    width: 5.187em;
+    height: 1.937em;
+
+
+    /* desktop logo */
+    @media (min-width: 33em) {
+
+        width: 8.937em;
+        height: 3.125em;
+
+    }
+}
+
+
+
+
+/**************/
 /* Hamburger menu*/
 /**************/
 header {
@@ -29,6 +53,28 @@ header search {
 header search form input {
 
     width: 100%;
+
+}
+
+header button {
+
+    font: inherit;
+    text-align: center;
+    color: var(--color-text-black);
+
+
+    display: flex;
+    align-items: center;
+    gap: .25em;
+    border-radius: .25em;
+    padding: .5em;
+
+    appearance: none;
+    border: none;
+    background-color: var(--color-background-functional);
+
+
+
 
 }
 
@@ -63,6 +109,17 @@ header nav.toonMenu {
     translate: 0 0;
     color: white
 }
+
+nav.toonMenu button {
+
+    position: absolute;
+    right: 0;
+    padding: .5em 1em .5em 1em
+}
+
+
+
+
 
 /**************/
 /* Media hamburger menu weg 38em*/
@@ -116,6 +173,7 @@ header nav.toonMenu {
 
         margin: 0;
         padding-bottom: .5em;
+        padding-left: 0;
 
     }
 }
@@ -251,23 +309,40 @@ ul img {
 /**************/
 /* 3 links header*/
 /**************/
-main nav ul {
+main nav:nth-of-type(1) ul {
 
     display: grid;
     gap: 1em;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
 
-    background-color: var(--color-link-red);
+    padding: 0;
+
 
 }
 
+/* verander de hover state van inverse color */
 main nav:nth-of-type(1) {
 
-    color: white;
+    color: var(--color-text-black)
+}
+
+main nav:nth-of-type(1) ul li {
+
+    padding: 0.5em;
+
+    border-radius: 0.625em;
+    background-color: var(--color-link-green);
+
 
 }
 
+main nav:nth-of-type(1) li p {
+
+
+    padding: 1.25em 1.25em 0.875em;
+
+}
 
 
 
@@ -308,7 +383,7 @@ main nav:nth-of-type(1) {
 
         grid-column-start: 1;
         grid-column-end: 4;
-        text-align: center;
+        /* text-align: center; */
 
     }
 
@@ -317,14 +392,15 @@ main nav:nth-of-type(1) {
         display: grid;
         /* display:flex;
         flex-direction: column; */
+        background-color: var(--color-card);
+        border-radius: 0.625em 0.625em;
 
     }
 
     section:nth-of-type(1)>a article {
 
-        order: -1;
-        display:grid;
-        grid-template-rows: 1fr 30% max-content;
+        display: grid;
+
 
     }
 
@@ -334,20 +410,29 @@ main nav:nth-of-type(1) {
         /* width: 100%;
         object-fit: cover; */
 
-        width:100%;
-        height:auto;
-        align-self:center;
-        object-fit:cover;
+        width: 100%;
+        height: auto;
+        align-self: center;
+        object-fit: cover;
         /* de default (inline) van img's overschrijven */
-        display:block;
-        order:-1;
-
+        display: block;
+        order: -1;
+        border-radius: 0.625em 0.625em 0 0;
     }
 
     section:nth-of-type(1) a article p {
 
         display: flex;
         align-items: center;
+
+    }
+
+
+    section:nth-of-type(1) a:nth-of-type(4) {
+        display: grid;
+        grid-column-start: -3;
+        grid-column-end: -2;
+        justify-content: center;
 
     }
 }
@@ -372,6 +457,10 @@ main nav:nth-of-type(1) {
 
     }
 
+    /* section:nth-of-type(2) {
+        
+    } */
+
     section:nth-of-type(2) ul {
 
         display: grid;
@@ -380,10 +469,12 @@ main nav:nth-of-type(1) {
         grid-template-rows: auto;
         grid-template-columns: 1fr 1fr 1fr;
 
+        padding: 0;
+
     }
 
 
-    section:nth-of-type(2) ul article {
+    section:nth-of-type(2) ul a {
 
         display: grid;
         justify-content: center;
@@ -392,101 +483,183 @@ main nav:nth-of-type(1) {
 
         grid-column-start: 1;
         grid-column-end: 4;
-        text-align: center;
+        /* text-align: center; */
         /* display:flex; */
+        position: relative
+    }
+
+
+    /* zou een class mogen want het is herhalend + gebruiken andere pagina's als dat van sprake was? */
+    section:nth-of-type(2) ul a article section {
+
+        position: absolute;
+        top: 7.5em;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: .5em;
+        border-radius: .3em;
+        border: em solid black;
+        background-color: green;
 
     }
 
-    section:nth-of-type(2) ul article a {
+    section:nth-of-type(2) ul a article section p {
+
+        margin: 0;
+
+    }
+
+    /* section:nth-of-type(2) ul article a {
 
         order: -1;
 
-    }
+    } */
 
     section:nth-of-type(2) article img {
 
         /* deze images scaled niet mee met de grid als de h3 de hele breedte kan nemen */
         /* object-fit: cover; */
         /* object-position: 50% 50%; */
-        width:100%;
-        height:auto;
-        align-self:center;
-        object-fit:cover;
+        width: 100%;
+        height: auto;
+        align-self: center;
+        object-fit: cover;
         /* de default (inline) van img's overschrijven */
-        display:block;
+        display: block;
 
 
     }
 
-    section:nth-of-type(2) ul nav {
+    section:nth-of-type(2) a {
+
+        /* display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-start: -3;
+        grid-row-end: -2; */
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+/* section:nth-of-type(2) ul nav {
 
         grid-column-start: -3;
         grid-column-end: -2;
         text-align: center;
 
-    }
+    } */
 
-}
 
-/* section:nth-of-type(2) ul {
 
-        display: grid;
-        gap: 1em;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
 
-    }
-
-    section:nth-of-type(1)>nav {
-
-        grid-column-start: -4;
-        grid-column-end: -2;
-        text-align: center;
-
-    }
 
 
 /****************/
-/* svg sizing & placement*/
+/* vacature & foodcorner*/
 /****************/
-svg {
 
-    width: 1em;
-    height: 1em;
+section:nth-of-type(3) {
 
-}
-
-figure {
-
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    
+    justify-content: space-around;
     align-items: center;
 
-    margin: 0;
-    padding-top: .5em;
-    padding-left: .5em;
-    padding-right: .5em;
-    padding-bottom: .5em;
+    position: relative;
+    padding-top: 5em;
+    padding-bottom: 5em;
 
 }
 
-main section div p {
+section:nth-of-type(3) a:nth-of-type(1){
+
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    background-color: var(--color-background-werken);
+
+}
+
+/* section:nth-of-type(3) a:nth-of-type(1) img {
+
+    width: 75%;
+    height: 75%;
+
+} */
+
+section:nth-of-type(3) a:nth-of-type(2){
+
+    background-color: var(--color-background-foodcorner);
+
+}
+
+/* section:nth-of-type(3) a:nth-of-type(2) img {
+
+    width: 100%;
+    height: 100%;
+
+} */
+
+section:nth-of-type(3) article {
+
+    display: flex;
+    gap: 1em;
+    /* flex-wrap: wrap; */
+
+}
+
+
+
+
+
+
+/****************/
+/* aanmelden nieuwsbrief*/
+/****************/
+
+section:nth-of-type(7) {
+
+    display: flex;
+    justify-content: space-around;
+
+    background-color: var(--color-background-functional);
+    
+
+}
+
+section:nth-of-type(7) svg {
+
+    width: 5em;
+    height: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+
+/* section:nth-of-type(7) p {
+
+    
+
+}
+
+section:nth-of-type(7) form {
+
+    
+
+} */
+
+
+/* main section article p {
 
     display: flex;
     align-self: center;
 
-}
-
-section:nth-of-type(3) {
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-
-section:nth-of-type(7) {
-
-    background-color: var(--color-background-functional);
-
-}
+} */
