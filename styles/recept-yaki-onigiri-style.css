@@ -259,7 +259,7 @@ main section:nth-of-type(2){
 
 
     border: 1px;
-    background-color: #e5e5e5;
+    background-color: var(--color-background);
 
 } 
 
@@ -272,9 +272,50 @@ main section:nth-of-type(2){
 /* Bereidingswijze */
 /****************/
 
-section:nth-of-type(8)> ul >li > svg{
+ol {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+  
+  counter-reset: stappenplan;
+  
+  display:grid;
+  gap:1em;
+}
 
-    width: 5em;
-    height: 5em;
+ol li {
+  counter-increment: stappenplan;
+  
+  display:grid;
+  grid-template-columns:max-content 1fr;
+  align-items:center;
+  gap:.5em;
+}
 
+ol li::before {
+  content:counter(stappenplan);
+  
+  grid-area:1/1;
+  
+  width:2em;
+  aspect-ratio:1;
+  
+  background-color:red;
+  color:white;
+  border-radius:50%;
+  
+  display:grid;
+  place-items:center;
+}
+
+li input {
+  grid-area:1/1;
+  
+  opacity:.1;
+}
+
+li:has( input:checked )::before {
+  content:"v";
+  
+  background-color:green;
 }
