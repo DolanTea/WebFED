@@ -184,30 +184,9 @@ header nav.toonMenu {
 
 
 
-
-
-
 /****************/
-/* svg sizing & placement*/
+/* terug knop */
 /****************/
-svg {
-
-    width: 0.894em;
-    height: 1.75em;
-
-}
-
-figure {
-
-    margin: 0;
-    padding-top: .5em;
-    padding-left: .5em;
-    padding-right: .5em;
-    padding-bottom: .5em;
-
-}
-
-
 main a:nth-of-type(1) {
 
     display: flex;
@@ -223,6 +202,9 @@ main a:nth-of-type(1) {
     align-self: center;
 
 }
+
+
+
 
 
 
@@ -244,6 +226,33 @@ main article img {
 
 
 /****************/
+/* voorbereiding recept */
+/****************/
+
+section:nth-of-type(1){
+
+    width: 100%;
+    padding: 0;
+    position: relative;
+    left: auto;
+    top: auto;
+    /* margin-top: -120px;  */
+
+}
+
+section:nth-of-type(2){
+
+    padding-bottom: 2em;
+
+}
+
+
+
+
+
+
+
+/****************/
 /* ingredienten */
 /****************/
 main section:nth-of-type(2){
@@ -253,3 +262,19 @@ main section:nth-of-type(2){
     background-color: #e5e5e5;
 
 } 
+
+
+
+
+
+
+/****************/
+/* Bereidingswijze */
+/****************/
+
+section:nth-of-type(8)> ul >li > svg{
+
+    width: 5em;
+    height: 5em;
+
+}

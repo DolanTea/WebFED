@@ -60,7 +60,7 @@ header button {
 
     font: inherit;
     text-align: center;
-    color: var(--color-text-black);
+    color: var(--color-text);
 
 
     display: flex;
@@ -324,7 +324,7 @@ main nav:nth-of-type(1) ul {
 /* verander de hover state van inverse color */
 main nav:nth-of-type(1) {
 
-    color: var(--color-text-black)
+    color: var(--color-text)
 }
 
 main nav:nth-of-type(1) ul li {
@@ -358,9 +358,9 @@ main nav:nth-of-type(1) li p {
 @media (min-width:38em) {
     main>h2 {
 
-        font-size: 2.125em;
-        line-height: 2.875em;
-        font-weight: 700;
+        font-size: var(--font-size-h2);
+        line-height: var(--font-lineheight);
+        font-weight: var(font-weight-heavy);
 
     }
 
@@ -400,7 +400,7 @@ main nav:nth-of-type(1) li p {
     section:nth-of-type(1)>a article {
 
         display: grid;
-
+        box-shadow: 0 0 1.25em 0 rgba(0, 0, 0, .16)
 
     }
 
@@ -451,9 +451,9 @@ main nav:nth-of-type(1) li p {
 @media (min-width:38em) {
     main>h2 {
 
-        font-size: 2.125em;
-        line-height: 2.875em;
-        font-weight: 700;
+        font-size: var(--font-size-h2);
+        line-height: var(--font-lineheight);
+        font-weight: var(font-weight-heavy);
 
     }
 
@@ -474,19 +474,16 @@ main nav:nth-of-type(1) li p {
     }
 
 
-    section:nth-of-type(2) ul a {
+    /* section:nth-of-type(2) ul a {
 
         display: grid;
         justify-content: center;
-        /* background-color: pink; */
 
 
         grid-column-start: 1;
         grid-column-end: 4;
-        /* text-align: center; */
-        /* display:flex; */
         position: relative
-    }
+    } */
 
 
     /* zou een class mogen want het is herhalend + gebruiken andere pagina's als dat van sprake was? */
@@ -518,6 +515,15 @@ main nav:nth-of-type(1) li p {
 
     } */
 
+    section:nth-of-type(2) article {
+
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        
+    }
+
     section:nth-of-type(2) article img {
 
         /* deze images scaled niet mee met de grid als de h3 de hele breedte kan nemen */
@@ -529,6 +535,8 @@ main nav:nth-of-type(1) li p {
         object-fit: cover;
         /* de default (inline) van img's overschrijven */
         display: block;
+
+        order: -1;
 
 
     }
@@ -640,21 +648,22 @@ section:nth-of-type(7) svg {
     height: 5em;
     padding-left: 1em;
     padding-right: 1em;
+    padding-top: 1.5em;
 
 }
 
 
-/* section:nth-of-type(7) p {
+section:nth-of-type(7) p {
 
-    
+    padding-top: 1em;
 
 }
 
 section:nth-of-type(7) form {
 
-    
+    padding-top: 2em;
 
-} */
+}
 
 
 /* main section article p {
@@ -663,3 +672,97 @@ section:nth-of-type(7) form {
     align-self: center;
 
 } */
+
+
+
+
+
+/****************/
+/* footer */
+/****************/
+
+section:nth-of-type(8) {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer nav:nth-of-type(1) ul {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    padding: 0;
+
+}
+
+footer nav:nth-of-type(1) svg {
+
+    width: 3em;
+    height: 3em;
+
+
+}
+
+
+
+/* verbergen voor chrome en edge*/
+details ::marker {
+
+  content: ''; 
+
+}
+
+/* verbergen voor safari aple */
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+summary {
+	font-weight: var(--font-weight-heavy);
+	
+	background-color: var(--color-background);
+	
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding:.5em;
+
+}
+
+summary::after {
+
+	content:"+";
+	transition:1s;
+	font-size:2em;
+	line-height:1rem;
+}
+
+
+details[open] summary::after {
+	rotate:45deg;
+}
+
+/* footer mobiel media */
+@media (width > 38em) {
+	footer {
+
+		display:flex;
+		gap:1em;
+
+	}
+	
+	summary::after {
+        
+		content:"";
+
+	}
+	
+	details::details-content {
+
+		content-visibility:visible;
+
+	}
+}
