@@ -203,6 +203,7 @@ nav.toonMenu button {
 /**************/
 body {
 
+
     font-family: var(--font);
     background-color: var(--color-background);
 
@@ -473,6 +474,14 @@ main nav:nth-of-type(1) li p {
 
     }
 
+    section:nth-of-type(2) ul li {
+
+        background-color: var(--color-card);
+        border-radius: 0.625em 0.625em;
+        box-shadow: 0 0 1.25em 0 rgba(0, 0, 0, .16)
+
+    }
+
 
     /* section:nth-of-type(2) ul a {
 
@@ -499,9 +508,16 @@ main nav:nth-of-type(1) li p {
         gap: .5em;
         border-radius: .3em;
         border: em solid black;
-        background-color: green;
+        background-color: grey;
 
     }
+
+     section:nth-of-type(2) ul a article section h3 {
+
+        position:absolute;
+        left: -999em;
+
+     }
 
     section:nth-of-type(2) ul a article section p {
 
@@ -527,13 +543,12 @@ main nav:nth-of-type(1) li p {
     section:nth-of-type(2) article img {
 
         /* deze images scaled niet mee met de grid als de h3 de hele breedte kan nemen */
-        /* object-fit: cover; */
-        /* object-position: 50% 50%; */
-        width: 100%;
-        height: auto;
+
+        /* met object-fit contain moet je vaste waardes geven bij width en height */
+        width: 5em;
+        height: 5em;
         align-self: center;
-        object-fit: cover;
-        /* de default (inline) van img's overschrijven */
+        object-fit: contain;
         display: block;
 
         order: -1;
@@ -577,7 +592,7 @@ section:nth-of-type(3) {
     grid-template-rows: 1fr;
     
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
 
     position: relative;
     padding-top: 5em;
@@ -595,32 +610,35 @@ section:nth-of-type(3) a:nth-of-type(1){
 
 }
 
-/* section:nth-of-type(3) a:nth-of-type(1) img {
+section:nth-of-type(3) a:nth-of-type(1) img {
 
-    width: 75%;
-    height: 75%;
+    width: 6em;
+    height: 6em;
+    object-fit:contain;
 
-} */
+}
 
 section:nth-of-type(3) a:nth-of-type(2){
+
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: -1;
 
     background-color: var(--color-background-foodcorner);
 
 }
 
-/* section:nth-of-type(3) a:nth-of-type(2) img {
-
-    width: 100%;
-    height: 100%;
-
-} */
 
 section:nth-of-type(3) article {
 
     display: flex;
+    align-items: center;
     gap: 1em;
-    /* flex-wrap: wrap; */
 
+    object-fit: contain;
+    width: 30em;
+    height: 10em;
+    
 }
 
 

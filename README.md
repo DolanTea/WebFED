@@ -190,7 +190,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Kasper Svg en titel in de footer wordt in een span gezet zodat je niet 2 elementen hebt maar wel de styling kan aanpassen via font-size wel aan sanne vragen voor pijltje svg want wat legaal is lastig te schatten voor de opdracht
   - Dylan gebruik voor al je iconen svgs. Om elementen horizontaal op dezelfde hoogte te krijgen kun je volgens damian een div gebruiken met flex en align content center
   - Nicha nintendo carousel ingewikkeld niet heel duidelijk wat legaal mag voor de opdracht 
-- 
 
 </details>
 
@@ -225,34 +224,48 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4 mijn grid kaartjes leken nog niet op hetzelfde van de website, dus ik heb de oefening 2 gridkaartjes opnieuw gedaan om meer ervan te begrijpen dit is nogal...vaag want ik zie die getallen niet echt voor mij voor de grids
   5 ik mocht geen div gebruiken en img in de p-tag was prima.
   6 light dark mode moet nog + product kaartje grid lukt nog niet helemaal... Ook de vacature/foodcorner heeft nog een klein scaling issue die ik niet recht krijg. Positioneren van aanmelden lukt ook niet helemaal
+  7 light-dark mode lag aan een spatie... 
+  8 Grid voor mijn 2de pagina is 2 colomen dit is met hulp van studentenassistente Mila getekend en duidelijker voor mij gemaakt hoe ik verder te werk kan gaan, nu is het een kwestie van uitproberen en dan nog laatste vragen stellen zo nodig.
+  9 Product kaartjes zaten in een ul>li>a>article>img>section,px3>p dit was volgens Mila niet nodig om nog een article te hebben, wel vermeldt om dit nog even na te vragen aan sanne. Maar voor mijn piste niveau, blauw zou het te uitdagend zijn om de productkaartjes beter te laten scalen op een tussenformaat van mobiel-tablet, omdat het niet echt dient voor iets naast visueel uiterlijk. Ook zit er een 'knop' in het productkaartje maar dit is gewoon een link gestyled als button omdat het hele kaartje klikbaar is. Dus ik vond het niet nodig om een button-tag erin te stoppen Mila zei vraag dit voor de zekerheid nog even na.
+  <img src="readme-images/readme-voortgang3-product-scaling.png>
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   | Dylan
-  | 
-  | 
+  | A1 joinen wegens verdeling
+  | grid scaling verplaats bij product-kaartjes & vacature & foodcorner, komt dit door de groeiruimte van regels?
+  | hamburger menu via tabben in narrator gaat de hele lijst door kan het openklappen of anders?
 
   | Stiene                                                    
-  |                         
+  | 1 wrm stijlt het picture element niet goed? 
+  | 2 Is het genoeg?           
 
   | Nicha
-  | 
+  | (afgemeldt)
 
   | Anne
-  | 
+  | 1. Mijn zoekvak vliegt overal over heen hoe stop ik dat?
+  | 2. add shelf knop
+  | 3. Footer afbeelding
 
   | Kasper
-  | 
+  | 1. Hoe krijg ik mijn grid kleiner 
+  | 2. Meer in de header (details)
+  | 3. Kaart met locaties van winkels?
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - object-fit:contain heeft vaste waardes nodig width & height, dit verhelpt oneven grid-kaartjes
+  - hoog-contrast hoort te zijn dat geen styling effecten werken het gaat om de layout
+  - skip link via positon absolute en dan a:focus left: 0; terug brengen
+  - voor afbeelding en grid passend maken zonder dat het van grootte veranderd moet je via display grid, dan width & height op vaste waardes dan  object-fit: contain.
+  - viewport zoom is met 2 vingers inzoomen
+  - nav:focus-within dan tab je dat de hamburgermenu open gaat en dan er doorheen gaat voordat je eruit gaat.
+    display none, transition behavior: allow-discrete; tegen de nav, omdat de smooth dan weg gaat van het openen hamburger menu, dan gaat het van display none naar display block voor het dichtgaan. bij de javascript header nav.ToonMenu @starting-style { translate:-100%}
+  - color isnt the only way bijv oude prijs door gekrast en nieuwe prijs rood mag dus de oude prijs niet rood zijn want dit is met kleur sturend
 
 </details>
 

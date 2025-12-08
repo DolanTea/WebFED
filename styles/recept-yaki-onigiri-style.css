@@ -6,17 +6,17 @@
 header a:nth-of-type(1) img {
 
 
-    width:5.187em;
-    height:1.937em;
+    width: 5.187em;
+    height: 1.937em;
 
 
-/* dekstop logo */
-@media (min-width: 33em){
+    /* dekstop logo */
+    @media (min-width: 33em) {
 
-    width:8.937em;
-    height:3.125em;
+        width: 8.937em;
+        height: 3.125em;
 
-}
+    }
 }
 
 
@@ -33,8 +33,17 @@ body {
     background-color: var(--color-background);
 }
 
+main article h2{
 
+    font-size: var(--font-size-h2);
 
+}
+
+main article h3 {
+
+    font-size: var(--font-size-h3);
+
+}
 
 
 
@@ -55,9 +64,9 @@ header {
 }
 
 /* of beide via nth-of-type 1 2 selecteren? */
-header>ul{
+header>ul {
 
-    margin:0;
+    margin: 0;
 
 }
 
@@ -133,7 +142,7 @@ header nav.toonMenu {
         position: static;
         translate: 0;
         display: contents;
-        
+
     }
 
     header ul:nth-of-type(1) {
@@ -187,6 +196,7 @@ header nav.toonMenu {
 /****************/
 /* terug knop */
 /****************/
+/* position absolute en relative op main is niet mooi */
 main a:nth-of-type(1) {
 
     display: flex;
@@ -200,6 +210,7 @@ main a:nth-of-type(1) {
 
     display: flex;
     align-self: center;
+    align-items: center;
 
 }
 
@@ -223,28 +234,55 @@ main article img {
 
 
 
+/****************/
+/* recept media grootscherm */
+/****************/
+@media (min-width:55em) {
+
+    main {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+
+    }
+
+
+}
+
+
 
 
 /****************/
 /* voorbereiding recept */
 /****************/
 
-section:nth-of-type(1){
+article{
 
-    width: 100%;
-    padding: 0;
     position: relative;
+
+}
+
+article>section:nth-of-type(1) {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+
+    /* width: 100%;
+    padding: 0;
+    position: absolute;
     left: auto;
-    top: auto;
-    /* margin-top: -120px;  */
+    top: auto; */
+
+    border: 1px solid;
+    border-color: var(--color-border);
+    border-radius: 0.625em;
+    background-color: var(--color-card);
 
 }
 
-section:nth-of-type(2){
 
-    padding-bottom: 2em;
-
-}
 
 
 
@@ -255,14 +293,86 @@ section:nth-of-type(2){
 /****************/
 /* ingredienten */
 /****************/
-main section:nth-of-type(2){
+/* miss een unordered lijst van maken  */
+/* of alle section veranderen naar ul li */
+article>section:nth-of-type(2) {
+
+    display: grid;
+    gap: 1em;
+
+}
 
 
-    border: 1px;
-    background-color: var(--color-background);
+article>section:nth-of-type(2) section {
 
-} 
+    display: grid;
+    padding-bottom: 1em;
 
+    border-radius: 0.625em;
+    border: 1px solid;
+    border-color: var(--color-border);
+    background-color: var(--color-border-background);
+
+}
+
+
+article>section:nth-of-type(2) ul {
+
+    counter-reset: checklist;
+
+    display: grid;
+    grid-template-columns: max-content;
+    align-items: center;
+    gap: .5em;
+    
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+}
+
+section:nth-of-type(2) ul li {
+
+    counter-increment: stappenplan;
+
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: .5em;
+
+}
+
+section:nth-of-type(2) ul li::before{
+
+    content: counter(stappenplan);
+
+    grid-area: 1/1;
+
+    width: 2em;
+    aspect-ratio: 1;
+
+    display: grid;
+    place-items: center;
+
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+
+}
+
+section:nth-of-type(2) ul li input{
+
+    grid-area: 1/1;
+    opacity: .1;
+
+}
+
+section:nth-of-type(2) ul li:has(input:checked)::before {
+    content: "√";
+
+    background-color: green;
+}
 
 
 
@@ -273,49 +383,50 @@ main section:nth-of-type(2){
 /****************/
 
 ol {
-  margin:0;
-  padding:0;
-  list-style-type:none;
-  
-  counter-reset: stappenplan;
-  
-  display:grid;
-  gap:1em;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    counter-reset: stappenplan;
+
+    display: grid;
+    gap: 1em;
 }
 
 ol li {
-  counter-increment: stappenplan;
-  
-  display:grid;
-  grid-template-columns:max-content 1fr;
-  align-items:center;
-  gap:.5em;
+    counter-increment: stappenplan;
+
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: .5em;
 }
 
 ol li::before {
-  content:counter(stappenplan);
-  
-  grid-area:1/1;
-  
-  width:2em;
-  aspect-ratio:1;
-  
-  background-color:red;
-  color:white;
-  border-radius:50%;
-  
-  display:grid;
-  place-items:center;
+    content: counter(stappenplan);
+
+    grid-area: 1/1;
+
+    width: 2em;
+    aspect-ratio: 1;
+
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
 }
 
 li input {
-  grid-area:1/1;
-  
-  opacity:.1;
+
+    grid-area: 1/1;
+    opacity: .1;
+
 }
 
-li:has( input:checked )::before {
-  content:"v";
-  
-  background-color:green;
+li:has(input:checked)::before {
+    content: "√";
+
+    background-color: green;
 }

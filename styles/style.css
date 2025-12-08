@@ -40,6 +40,8 @@
 
 	--font-size-h2: 2.125em;
 
+	--font-size-h3: 0.83em;
+
 	/* lineheight */
 	--font-lineheight: 2.875em;
 
@@ -47,31 +49,42 @@
 	--font-weight-heavy: 700;
 
 	/* colors */
- 	color-scheme: light dark;
-
+	color-scheme: light dark;
 
 	--color-text: light-dark(#000, #fff);
-	
 
 	--color-card: light-dark(#fff, #000);
 	--color-background: light-dark(#fafafa, #000);
-	
+
 	--color-background-functional: #6cb32f;
 	--color-background-werken: #75a8c6;
 	--color-background-foodcorner: #f26aac;
 
-	/* link colors */
-	--color-link-green: #6cb32f;
-	--color-link: light-dark(#6cb32f, #75a8c6);
-	--color-link-yellow: #fcb900;
+	/* border colors */
+	--color-border:#e5e5e5;
+	--color-border-background:#f7f7f7;
 
-	--link-color:green;
-  	--inverse-color: light-dark(green, pink);
-	/* light-dark (green, pink) */
-	--accent-color:#fcb900;
+	/* link colors */
+	--color-link: light-dark(#6cb32f, #75a8c6);
+	--inverse-color: light-dark(black, white);
+	/* black moet iets anders of grid kaartje anders aanwijzen */
+
+
+	/* nog opschonen */
+	--color-link-green: #6cb32f;
+	--color-link-yellow: #fcb900;
+	--link-color: green;
+	--accent-color: #fcb900;
+
 
 }
 
+::selection {
+
+	color: green;
+	background-color: blue;
+
+}
 
 
 
@@ -92,6 +105,7 @@ stukken code uit te leggen */
 
 html {
 	font-family: "Nunito", "sans-serif";
+	
 }
 
 /* h1, h2, h3 {
@@ -166,23 +180,23 @@ figcaption {
 /* States steelers style*/
 /****************/
 
-a{
-  text-decoration:none;
-  transition: .5s;
+a {
+	text-decoration: none;
+	transition: .5s;
 }
 
 /* sanne vragen */
 /* hover en focus */
 a:is(:hover, :focus-visible) {
-  color:var(--inverse-color);
-  box-shadow: inset 0 -1.5em 0 var(--link-color);
+	color: var(--inverse-color);
+	box-shadow: inset 0 -1.5em 0 var(--link-color);
 	/* inset plaats de bix-shaodw in het element */
 	/* 1.5em is de hoogte (line-height) van de a */
 }
 
 /* active */
 a:active {
-  --link-color:var(--accent-color);
+	--link-color: var(--accent-color);
 }
 
 
@@ -194,20 +208,20 @@ a:active {
 /****************/
 svg {
 
-    width: 1em;
-    height: 1em;
+	width: 1em;
+	height: 1em;
 
 }
 
 figure {
 
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 
-    margin: 0;
-    padding-top: .5em;
-    padding-left: .5em;
-    padding-right: .5em;
-    padding-bottom: .5em;
+	margin: 0;
+	padding-top: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
+	padding-bottom: .5em;
 
 }
