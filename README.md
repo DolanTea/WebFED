@@ -204,6 +204,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Korte toelichting verbeterd:
+  - Aria-labels op a-tags & buttons
+  - Keyboard visible focus style for interactive elements tab & shift & visual layout voor focus
+  - Headings logische volgorde en geen level overgeslagen
+  - Lists wegens een wordpress zijn er veel divs gebruik en af ten toe ol, ul, li
+  - Images hebben alt attribute tekst
+  - Controls skiplink toegevoegd, focus states, buttons voor actie, a voor navigatie
+  - Appearance dark, light mode toegevoegd (high contrast is vlgm systeem automatisch)
+  - Animation carousel heeft betere controls en prefers-reducedmotion gekregen
+  - Color contrast verbeterd volgens de extension 'WCAG color contrast checker'     https://chromewebstore.google.com/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf?hl=nl&utm_source=ext_sidebar
+
+  Gehele WCAG checklist test 1 + 2:
+  <img src="readme-images/dylan202-wcag-1.png">
+  <img src="readme-images/dylan202-wcag-2.png">
+  <img src="readme-images/dylan202-wcag-3.png">
+  <img src="readme-images/dylan202-wcag-4.png">
+  <img src="readme-images/dylan202-wcag-5.png">
+  <img src="readme-images/dylan202-wcag-6.png">
+  <img src="readme-images/dylan202-wcag-7.png">
+  <img src="readme-images/dylan202-wcag-8.png">
 
 </details>
 
@@ -279,19 +299,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/eindgesprek-homepagina.png" width="375px" alt="carousel en links">
+  <img src="readme-images/eindgesprek-recept-product-kaartjes.png" width="375px" alt="uitomst opdracht 1">
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
+  <img src="readme-images/eindgesprek-homepagina-darkmode.png" width="375px" alt="darkmode en alle kleuren wcag kloppend">
+  <img src="readme-images/eindgesprek-recept-product-kaartjes-darkmode.png" width="375px" alt="darkmode en alle kleuren wcag kloppend">
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/eindgesprek-nietgelukt-receptpagina-splitsing.png" width="375px" alt="originele grid splitsing receptpagina">
+  <img src="readme-images/eindgesprek-nietgelukt-producten.png" width="375px" alt="producten korting laten zien op tablet scaling">
+  <img src="readme-images/eindgesprek-nietgelukt-vacature-foodcorner.png" width="375px" alt="de hele breedte nemen">
 </details>
 
 

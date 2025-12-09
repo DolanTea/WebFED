@@ -52,6 +52,7 @@
 	color-scheme: light dark;
 
 	--color-text: light-dark(#000, #fff);
+	--color-sale: #055c05;
 
 	--color-card: light-dark(#fff, #000);
 	--color-background: light-dark(#fafafa, #000);
@@ -61,13 +62,20 @@
 	--color-background-foodcorner: #f26aac;
 
 	/* border colors */
-	--color-border:#e5e5e5;
-	--color-border-background:#f7f7f7;
+	--color-border: #e5e5e5;
+	--color-border-background: light-dark(#f7f7f7, #000);
 
 	/* link colors */
 	--color-link: light-dark(#6cb32f, #75a8c6);
 	--inverse-color: light-dark(black, white);
 	/* black moet iets anders of grid kaartje anders aanwijzen */
+
+	/* checklist/stappenplan color */
+	--color-checklist: grey;
+	--color-stappenplan: red;
+
+	/* svg color */
+	--color-svg: light-dark(#000, #fff);
 
 
 	/* nog opschonen */
@@ -105,7 +113,6 @@ stukken code uit te leggen */
 
 html {
 	font-family: "Nunito", "sans-serif";
-	
 }
 
 /* h1, h2, h3 {
@@ -141,33 +148,239 @@ font-weight:400;
 /* Ik wil de volgorde aanhouden op functioneel met streepjes-tussen voor overig */
 /* jouw code */
 
+
+
+
+
+
+/**************/
+/* logo */
+/**************/
+
+/* mobiel logo */
+header a:nth-of-type(1) img {
+
+
+	width: 5.187em;
+	height: 1.937em;
+
+
+	/* desktop logo */
+	@media (min-width: 33em) {
+
+		width: 8.937em;
+		height: 3.125em;
+
+	}
+}
+
+
+
+
+/**************/
+/* Hamburger menu*/
+/**************/
 header {
+
 	position: sticky;
+	top: 0;
+
+	display: flex;
+	gap: 1em;
+	align-items: center;
+	z-index: 1;
 
 }
 
-a {
-	outline: none;
-	text-decoration: none;
-	color: inherit;
+/* of beide via nth-of-type 1 2 selecteren? */
+header>ul {
+
+	margin: 0;
+
 }
+
+header search {
+
+	flex-grow: 1;
+
+}
+
+header search form input {
+
+	width: 100%;
+	position: relative;
+
+}
+
+header search form svg {
+
+	position: absolute;
+	right: 0;
+
+}
+
+header button {
+
+	font: inherit;
+	text-align: center;
+	color: var(--color-text);
+
+
+	display: flex;
+	align-items: center;
+	gap: .25em;
+	border-radius: .25em;
+	padding: .5em;
+
+	appearance: none;
+	border: none;
+	background-color: var(--color-background-functional);
+
+
+
+
+}
+
+header h1 {
+
+	position: absolute;
+	left: -999em;
+}
+
+
+header nav {
+
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	translate: -100%;
+
+
+	transition: 0.3s;
+
+	background-color: black;
+
+}
+
+
+/* Hamburger menu open is */
+header nav.toonMenu {
+
+	translate: 0 0;
+	color: white
+}
+
+nav.toonMenu button {
+
+	position: absolute;
+	right: 0;
+	padding: .5em 1em .5em 1em
+}
+
+
+
+
+
+/**************/
+/* Media hamburger menu weg 38em*/
+/**************/
+@media (min-width:33em) {
+	header {
+
+		flex-wrap: wrap;
+		background-color: var(--color-background);
+
+	}
+
+
+	header button {
+
+		display: none;
+
+	}
+
+	header nav {
+
+		position: static;
+		translate: 0;
+		display: contents;
+
+	}
+
+	header ul:nth-of-type(1) {
+
+		order: -1;
+		width: 100%;
+
+		display: flex;
+		gap: 1em;
+		justify-content: end;
+
+		margin: 0;
+
+	}
+
+	header ul:nth-of-type(2) {
+
+		order: 1;
+		width: 100%;
+
+		display: flex;
+		gap: 1em;
+		justify-content: center;
+		align-self: center;
+		flex-grow: 4;
+
+		margin: 0;
+		padding-bottom: .5em;
+		padding-left: 0;
+
+	}
+}
+
+
+@media (min-width:48em) {
+	header search {
+
+		order: 5;
+
+	}
+
+	header ul:nth-of-type(2) {
+
+		width: auto;
+
+	}
+}
+
+
+
+
+
+
+/**************/
+/* body font & backgroundcolor */
+/**************/
+body {
+
+
+	font-family: var(--font);
+	background-color: var(--color-background);
+
+}
+
+
+
+
+/**************/
+/* list item styling mogelijk weg*/
+/**************/
 
 li {
 	list-style-type: none;
-}
-
-
-
-
-
-
-
-/****************/
-/* figcaption weghalen */
-/****************/
-figcaption {
-	position: absolute;
-	left: -999em;
 }
 
 
@@ -181,7 +394,10 @@ figcaption {
 /****************/
 
 a {
+	outline: none;
 	text-decoration: none;
+
+	color: inherit;
 	transition: .5s;
 }
 
@@ -203,11 +419,14 @@ a:active {
 
 
 
+
+
 /****************/
 /* svg sizing & placement*/
 /****************/
 svg {
 
+	color: var(--color-svg);
 	width: 1em;
 	height: 1em;
 
@@ -224,4 +443,104 @@ figure {
 	padding-right: .5em;
 	padding-bottom: .5em;
 
+}
+
+figcaption {
+	position: absolute;
+	left: -999em;
+}
+
+
+
+
+
+
+/****************/
+/* footer */
+/****************/
+
+section:nth-of-type(8) {
+
+	display: flex;
+	flex-direction: column;
+
+}
+
+footer nav:nth-of-type(1) ul {
+
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+
+	padding: 0;
+
+}
+
+footer nav:nth-of-type(1) svg {
+
+	width: 3em;
+	height: 3em;
+
+
+}
+
+
+
+/* verbergen voor chrome en edge*/
+details ::marker {
+
+	content: '';
+
+}
+
+/* verbergen voor safari aple */
+details summary::-webkit-details-marker {
+	display: none;
+}
+
+summary {
+	font-weight: var(--font-weight-heavy);
+
+	background-color: var(--color-background);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: .5em;
+
+}
+
+summary::after {
+
+	content: "+";
+	transition: 1s;
+	font-size: 2em;
+	line-height: 1rem;
+}
+
+
+details[open] summary::after {
+	rotate: 45deg;
+}
+
+/* footer mobiel media */
+@media (width > 38em) {
+	footer {
+
+		display: flex;
+		gap: 1em;
+
+	}
+
+	summary::after {
+
+		content: "";
+
+	}
+
+	details::details-content {
+
+		content-visibility: visible;
+
+	}
 }

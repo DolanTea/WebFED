@@ -1,37 +1,6 @@
-/**************/
-/* logo */
-/**************/
-
-/* mobiel logo */
-header a:nth-of-type(1) img {
-
-
-    width: 5.187em;
-    height: 1.937em;
-
-
-    /* dekstop logo */
-    @media (min-width: 33em) {
-
-        width: 8.937em;
-        height: 3.125em;
-
-    }
-}
-
-
-
-
-
-
 /****************/
 /* font & backgroundcolor */
 /****************/
-
-body {
-    font-family: var(--font);
-    background-color: var(--color-background);
-}
 
 main article h2{
 
@@ -47,148 +16,6 @@ main article h3 {
 
 
 
-
-/**************/
-/* Hamburger menu*/
-/**************/
-header {
-
-    position: sticky;
-    top: 0;
-
-    display: flex;
-    gap: 1em;
-    align-items: center;
-    z-index: 1;
-
-}
-
-/* of beide via nth-of-type 1 2 selecteren? */
-header>ul {
-
-    margin: 0;
-
-}
-
-header search {
-
-    flex-grow: 1;
-
-}
-
-header search form input {
-
-    width: 100%;
-
-}
-
-header h1 {
-
-    position: absolute;
-    left: -999em;
-}
-
-
-header nav {
-
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    translate: -100%;
-
-
-    transition: 0.3s;
-
-    background-color: black;
-
-}
-
-
-/* Hamburger menu open is */
-header nav.toonMenu {
-
-    translate: 0 0;
-
-}
-
-
-
-
-
-
-/**************/
-/* Media hamburger menu weg 38em*/
-/**************/
-@media (min-width:33em) {
-    header {
-
-        flex-wrap: wrap;
-        background-color: var(--color-background);
-
-    }
-
-
-    header button {
-
-        display: none;
-
-    }
-
-    header nav {
-
-        position: static;
-        translate: 0;
-        display: contents;
-
-    }
-
-    header ul:nth-of-type(1) {
-
-        order: -1;
-        width: 100%;
-
-        display: flex;
-        gap: 1em;
-        justify-content: end;
-
-        margin: 0;
-
-    }
-
-    header ul:nth-of-type(2) {
-
-        order: 1;
-        width: 100%;
-
-        display: flex;
-        gap: 1em;
-        justify-content: center;
-        align-self: center;
-        flex-grow: 4;
-
-        margin: 0;
-        padding-bottom: .5em;
-
-    }
-}
-
-
-@media (min-width:48em) {
-    header search {
-
-        order: 5;
-
-    }
-
-    header ul:nth-of-type(2) {
-
-        width: auto;
-
-    }
-}
 
 
 
@@ -220,7 +47,6 @@ main a:nth-of-type(1) {
 
 
 
-
 /****************/
 /* background recept foto*/
 /****************/
@@ -234,10 +60,12 @@ main article img {
 
 
 
+
+
 /****************/
 /* recept media grootscherm */
 /****************/
-@media (min-width:55em) {
+/* @media (min-width:54em) {
 
     main {
 
@@ -247,8 +75,14 @@ main article img {
 
     }
 
+    article>section:nth-of-type(1){
 
-}
+        grid-column-start: 1;
+
+    }
+
+
+} */
 
 
 
@@ -267,7 +101,7 @@ article>section:nth-of-type(1) {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: auto;
 
     /* width: 100%;
     padding: 0;
@@ -282,6 +116,46 @@ article>section:nth-of-type(1) {
 
 }
 
+article>section:nth-of-type(1) h2 {
+
+    margin: 0;
+    padding-top: .5em;
+    padding-bottom: .5em;
+
+    text-align: center
+
+}
+
+article>section:nth-of-type(1) p {
+
+    border-top: 1px solid var(--color-border);
+
+    margin: 0;
+    padding-top: .5em;
+    padding-left: 2em;
+    padding-bottom: .5em;
+
+}
+
+article>section:nth-of-type(1) a {
+
+    display: block;
+    justify-self: center;
+    text-align: center;
+
+    width: 15%;
+
+    background-color: var(--color-border-background);
+
+    border: none;
+	border-radius: 0.625em;
+	padding: 0;
+
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+}
 
 
 
@@ -355,7 +229,7 @@ section:nth-of-type(2) ul li::before{
     display: grid;
     place-items: center;
 
-    background-color: black;
+    background-color: var(--color-checklist);
     color: white;
     border-radius: 50%;
 
@@ -410,7 +284,7 @@ ol li::before {
     width: 2em;
     aspect-ratio: 1;
 
-    background-color: red;
+    background-color: var(--color-stappenplan);
     color: white;
     border-radius: 50%;
 
