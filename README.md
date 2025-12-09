@@ -305,6 +305,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
+  zoveel nieuwe kennis met code, geen div of spans of classes, veel grid geleerd, veel custom properties en veel positoneren
+
   <img src="readme-images/eindgesprek-homepagina-darkmode.png" width="375px" alt="darkmode en alle kleuren wcag kloppend">
   <img src="readme-images/eindgesprek-recept-product-kaartjes-darkmode.png" width="375px" alt="darkmode en alle kleuren wcag kloppend">
 
@@ -314,6 +316,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/eindgesprek-nietgelukt-receptpagina-splitsing.png" width="375px" alt="originele grid splitsing receptpagina">
   <img src="readme-images/eindgesprek-nietgelukt-producten.png" width="375px" alt="producten korting laten zien op tablet scaling">
   <img src="readme-images/eindgesprek-nietgelukt-vacature-foodcorner.png" width="375px" alt="de hele breedte nemen">
+
+  hamburger menu via tabben geen tijd meer voor gehad
+  miniscule position scaling en grid ook geen tijd meer voor gehad
 </details>
 
 
