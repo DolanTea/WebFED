@@ -2,7 +2,7 @@
 /* font & backgroundcolor */
 /****************/
 
-main article h2{
+main article h2 {
 
     font-size: var(--font-size-h2);
 
@@ -15,6 +15,37 @@ main article h3 {
 }
 
 
+
+
+
+
+/**************/
+/* Skiplink homepage */
+/**************/
+main:focus {
+
+    outline: 0.1875em solid var(--accent-color);
+    outline-offset: .5em;
+}
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: .5em 1em;
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    transform: translateY(-100%);
+    transition: transform .2s ease;
+
+    z-index: 1000;
+}
+
+.skip-link:focus-visible {
+    transform: translateY(0);
+}
 
 
 
@@ -45,6 +76,39 @@ main a:nth-of-type(1) {
 
 
 
+/****************/
+/* voorbereiding recept */
+/****************/
+
+article {
+
+    position: relative;
+
+}
+
+@media (min-width:54em) {
+
+    article {
+
+        display: grid;
+        grid-template-columns: 1em 20em 1em 1fr;
+        grid-template-rows: max-content max-content 1fr;
+
+        align-items: start;
+        row-gap: 1em;
+
+        grid-template-areas:
+            "img img          img img"
+            ".   summary      .   wijze"
+            ".   ingredienten .   wijze";
+
+    }
+
+
+}
+
+
+
 
 
 /****************/
@@ -58,45 +122,16 @@ main article img {
 }
 
 
-
-
-
-
-/****************/
-/* recept media grootscherm */
-/****************/
-/* @media (min-width:54em) {
-
-    main {
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-
+@media (min-width:54em) {
+    main article img {
+        grid-area: img;
     }
-
-    article>section:nth-of-type(1){
-
-        grid-column-start: 1;
-
-    }
-
-
-} */
-
-
-
-
-/****************/
-/* voorbereiding recept */
-/****************/
-
-article{
-
-    position: relative;
-
 }
 
+
+
+
+/* recept summary  */
 article>section:nth-of-type(1) {
 
     display: grid;
@@ -123,7 +158,6 @@ article>section:nth-of-type(1) h2 {
     padding-bottom: .5em;
 
     text-align: center
-
 }
 
 article>section:nth-of-type(1) p {
@@ -148,15 +182,23 @@ article>section:nth-of-type(1) a {
     background-color: var(--color-border-background);
 
     border: none;
-	border-radius: 0.625em;
-	padding: 0;
+    border-radius: 0.625em;
+    padding: 0;
 
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 
 }
 
+
+@media (min-width:54em) {
+    article>section:nth-of-type(1) {
+        grid-area: summary;
+
+        margin-top: -6em;
+    }
+}
 
 
 
@@ -198,7 +240,7 @@ article>section:nth-of-type(2) ul {
     grid-template-columns: max-content;
     align-items: center;
     gap: .5em;
-    
+
 
     margin: 0;
     padding: 0;
@@ -217,7 +259,7 @@ section:nth-of-type(2) ul li {
 
 }
 
-section:nth-of-type(2) ul li::before{
+section:nth-of-type(2) ul li::before {
 
     content: counter(stappenplan);
 
@@ -235,7 +277,7 @@ section:nth-of-type(2) ul li::before{
 
 }
 
-section:nth-of-type(2) ul li input{
+section:nth-of-type(2) ul li input {
 
     grid-area: 1/1;
     opacity: .1;
@@ -248,6 +290,13 @@ section:nth-of-type(2) ul li:has(input:checked)::before {
     background-color: green;
 }
 
+
+
+@media (min-width:54em) {
+    article>section:nth-of-type(2) {
+        grid-area: ingredienten;
+    }
+}
 
 
 
@@ -303,4 +352,10 @@ li:has(input:checked)::before {
     content: "√";
 
     background-color: green;
+}
+
+@media (min-width:54em) {
+    article>section:nth-of-type(3) {
+        grid-area: wijze;
+    }
 }

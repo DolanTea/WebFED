@@ -16,6 +16,7 @@
 </head>
 
 <body>
+	<a href="#main-content" class="skip-link">Ga naar hoofdinhoud</a>
 	<header>
 		<!-- hamburger menu tabben via narrator hele lijst of dat het wel opent en dan er door heen gaat opzoeken -->
 		<!-- logo oriental -->
@@ -38,7 +39,7 @@
 
 		<!-- hamburger menu -->
 		<!-- hamburger img https://assets.codepen.io/274456/ui-icon-hamburger.svg -->
-		<button aria-hidden="true"><img src="https://assets.codepen.io/274456/ui-icon-hamburger.svg"
+		<button aria-label="hamburger menu"><img src="https://assets.codepen.io/274456/ui-icon-hamburger.svg"
 				alt="3 witte streepjes UI hamburger menu " />Menu</button>
 
 		<nav>
@@ -62,10 +63,11 @@
 	</header>
 
 	<!-- skip link id op de main -->
-	<main>
+	<!-- https://www.w3schools.com/accessibility/accessibility_skip_links.php -->
+	<main id="main-content" tabindex="-1">
 
 		<!-- deze moet nog onzichtbaar want de afbeelding is h1 -->
-		<h1>Amazing Oriental</h1>
+		<h1 class="visually-hidden">Amazing Oriental</h1>
 
 		<!-- carousel -->
 		<!-- afbeelding 1 navragen via visually hidden of hoe dit moet -->
@@ -79,21 +81,21 @@
 			</li>
 
 			<li>
-				<a href="#">
+				<a aria-label="dutch comic con oriental" href="#">
 					<img src="images/Dutch_Comic_Con_20251122_Web_Banner.jpg"
 						alt="Heroes Dutch Comic Con Utrecht amazing oriental collab van 22-23 november 2025, een varken die gewicht tilt, een vrouw met een deegroller die met afschuw kijkt en een aap in glas die verbaasd kijkt">
 				</a>
 			</li>
 
 			<li>
-				<a href="#">
+				<a aria-label="hot pot season" href="#">
 					<img src="images/Web_Banner_Hot_Pot_20251119_1350x640px.jpg"
 						alt="Ai-generated hot pot season foto met een aziatische vrouw, witte man, aziatische man en zwarte vrouw die hotpot eten">
 				</a>
 			</li>
 
 			<li>
-				<a href="#">
+				<a aria-label="black friday sale" href="#">
 					<img src="images/Black-Friday_website_Banner-1.jpg"
 						alt="Black Friday Deals tot wel 50% korting van 28 november tot 1 december 2025 bij amazing oriental">
 				</a>
@@ -149,7 +151,7 @@
 					<p>
 						<!-- role="svg" -->
 						<!-- https://icons.getbootstrap.com/icons/clock/ -->
-						<svg aria-label="getekend klok die 5 uur aanwijst" version="1.1"
+						<svg aria-label="getekend klok die 5 uur aanwijst" version="1.1" fill="currentColor"
 							xmlns="http://www.w3.org/2000/svg">
 							<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
 							<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
@@ -174,7 +176,7 @@
 
 					<p>
 						<!-- https://icons.getbootstrap.com/icons/clock/ -->
-						<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+						<svg version="1.1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 							<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
 							<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
 						</svg>
@@ -198,7 +200,7 @@
 
 					<p>
 						<!-- https://icons.getbootstrap.com/icons/clock/ -->
-						<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+						<svg version="1.1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 							<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
 							<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
 						</svg>
@@ -424,8 +426,7 @@
 		<!-- aanmelden nieuwsbrief -->
 		<section>
 			<!-- https://icons.getbootstrap.com/icons/envelope/ -->
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
-				viewBox="0 0 16 16">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
 				<path
 					d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
 			</svg>
@@ -473,11 +474,10 @@
 						<!-- https://saveweb2zip.com/en img downloaden en dan svg convert https://convertio.co/nl/ -->
 						<!-- width="28.000000pt" height="56.000000pt" -->
 						<!--  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"> -->
-						<svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.000000 56.000000"
-							preserveAspectRatio="xMidYMid meet">
+						<svg version="1.0" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 28.000000 56.000000" preserveAspectRatio="xMidYMid meet">
 
-							<g transform="translate(0.000000,56.000000) scale(0.100000,-0.100000)" fill="#000000"
-								stroke="none">
+							<g transform="translate(0.000000,56.000000) scale(0.100000,-0.100000)" stroke="none">
 								<path d="M104 526 c-31 -31 -34 -39 -34 -95 l0 -61 -35 0 c-35 0 -35 0 -35
 										-45 0 -45 0 -45 35 -45 l35 0 0 -140 0 -140 55 0 55 0 0 140 0 140 34 0 c28 0
 										36 5 44 28 5 15 13 35 17 45 6 15 1 17 -44 17 l-52 0 3 47 c3 44 5 48 33 53
@@ -493,11 +493,10 @@
 						<!-- https://saveweb2zip.com/en img downloaden en dan svg convert https://convertio.co/nl/ -->
 						<!-- width="56.000000pt" height="56.000000pt" -->
 						<!--  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" -->
-						<svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.000000 56.000000"
-							preserveAspectRatio="xMidYMid meet">
+						<svg version="1.0" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 56.000000 56.000000" preserveAspectRatio="xMidYMid meet">
 
-							<g transform="translate(0.000000,56.000000) scale(0.100000,-0.100000)" fill="#000000"
-								stroke="none">
+							<g transform="translate(0.000000,56.000000) scale(0.100000,-0.100000)" stroke="none">
 								<path d="M104 541 c-23 -10 -54 -36 -70 -57 l-29 -37 0 -168 0 -167 30 -38
 										c54 -66 80 -74 245 -74 165 0 191 8 245 74 l30 38 0 167 0 168 -29 37 c-47 63
 										-89 76 -246 76 -111 0 -142 -4 -176 -19z m353 -57 c44 -33 55 -81 51 -224 -5
@@ -520,11 +519,10 @@
 						<!-- https://saveweb2zip.com/en img downloaden en dan svg convert https://convertio.co/nl/ -->
 						<!-- width="66.000000pt" height="54.000000pt" -->
 						<!-- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" -->
-						<svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.000000 54.000000"
-							preserveAspectRatio="xMidYMid meet">
+						<svg version="1.0" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 66.000000 54.000000" preserveAspectRatio="xMidYMid meet">
 
-							<g transform="translate(0.000000,54.000000) scale(0.100000,-0.100000)" fill="#000000"
-								stroke="none">
+							<g transform="translate(0.000000,54.000000) scale(0.100000,-0.100000)" stroke="none">
 								<path d="M152 526 c-152 -50 -200 -210 -93 -310 27 -26 30 -35 25 -64 l-7 -34
 										33 17 c26 13 47 16 88 11 l55 -6 -6 29 c-19 96 83 201 197 201 30 0 32 10 12
 										48 -18 35 -62 75 -106 97 -45 23 -144 29 -198 11z m32 -109 c16 -25 -16 -56

@@ -29,6 +29,7 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+/* inverse color veroorzaakt overlap */
 :root {
 
 	/* font */
@@ -67,7 +68,7 @@
 
 	/* link colors */
 	--color-link: light-dark(#6cb32f, #75a8c6);
-	--inverse-color: light-dark(black, white);
+	--inverse-color: light-dark(#ffffff, #000000);
 	/* black moet iets anders of grid kaartje anders aanwijzen */
 
 	/* checklist/stappenplan color */
@@ -75,10 +76,25 @@
 	--color-stappenplan: red;
 
 	/* svg color */
-	--color-svg: light-dark(#000, #fff);
+	/* uiteindelijk doet het niet maar
+	 --color-svg is nu zwart voor light mode waar het MOET blijven */
+	--color-svg: #000;
 
+	/* dark mode */
+	@media (prefers-color-scheme: dark) {
+		:root {
 
-	/* nog opschonen */
+			--color-svg: #fff;
+
+		}
+	}
+
+	/* moet de kleur blijven */
+	--color-white: #fff;
+	--color-black: #000;
+	--color-blue: #0000FF;
+
+	/* link color */
 	--color-link-green: #6cb32f;
 	--color-link-yellow: #fcb900;
 	--link-color: green;
@@ -89,8 +105,8 @@
 
 ::selection {
 
-	color: green;
-	background-color: blue;
+	color: var(--color-white);
+	background-color: var(--color-blue);
 
 }
 
@@ -156,7 +172,6 @@ font-weight:400;
 /**************/
 /* logo */
 /**************/
-
 /* mobiel logo */
 header a:nth-of-type(1) img {
 
@@ -172,6 +187,24 @@ header a:nth-of-type(1) img {
 		height: 3.125em;
 
 	}
+}
+
+
+
+/*********/
+/* Visually hidden */
+/*********/
+
+/* class voor h1 headings verbergen  niet voor screenreader*/
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
 
 
@@ -205,17 +238,23 @@ header search {
 
 }
 
+header search form {
+
+	position: relative;
+
+}
+
 header search form input {
 
 	width: 100%;
-	position: relative;
 
 }
 
 header search form svg {
 
 	position: absolute;
-	right: 0;
+	right: 0.3em;
+	top: 0.3em;
 
 }
 
@@ -257,12 +296,14 @@ header nav {
 	right: 0;
 
 	translate: -100%;
-
-
 	transition: 0.3s;
 
-	background-color: black;
+	background-color: var(--color-black);
 
+	/* Via uitleg van Sanne */
+	@starting-style {
+		translate: 0 100%
+	}
 }
 
 
@@ -270,7 +311,7 @@ header nav {
 header nav.toonMenu {
 
 	translate: 0 0;
-	color: white
+	color: var(--color-white)
 }
 
 nav.toonMenu button {
@@ -389,25 +430,47 @@ li {
 
 
 
-/****************/
-/* States steelers style*/
-/****************/
 
+/***********/
+/* States underline style */
+/***********/
 a {
-	outline: none;
+
+	position: relative;
+
 	text-decoration: none;
 
+	transition: color .5s;
+
 	color: inherit;
-	transition: .5s;
+
 }
 
-/* sanne vragen */
+a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: .2em;
+	background-color: currentColor;
+
+	/* initieel horizontaal helemaal plat */
+	transform: scaleX(0);
+	/* voor de terugweg */
+	/* wordt de ::after weer plat naar rechts in het midden */
+	transform-origin: right center;
+
+	transition: transform .5s;
+}
+
 /* hover en focus */
-a:is(:hover, :focus-visible) {
-	color: var(--inverse-color);
-	box-shadow: inset 0 -1.5em 0 var(--link-color);
-	/* inset plaats de bix-shaodw in het element */
-	/* 1.5em is de hoogte (line-height) van de a */
+a:is(:hover, :focus-visible)::after {
+	/* nu horizontaal de hele breedte */
+	transform: scaleX(1);
+	/* voor de heenweg */
+	/* wordt de ::after helemaal breed vanaf links in het midden */
+	transform-origin: left center;
 }
 
 /* active */
@@ -419,18 +482,19 @@ a:active {
 
 
 
-
-
 /****************/
 /* svg sizing & placement*/
 /****************/
 svg {
 
-	color: var(--color-svg);
+
 	width: 1em;
 	height: 1em;
 
+	fill: var(--color-text);
+
 }
+
 
 figure {
 
@@ -454,11 +518,10 @@ figcaption {
 
 
 
-
 /****************/
 /* footer */
 /****************/
-
+/* mobiel */
 section:nth-of-type(8) {
 
 	display: flex;
@@ -466,43 +529,40 @@ section:nth-of-type(8) {
 
 }
 
-footer nav:nth-of-type(1) ul {
+footer>nav:first-of-type ul {
 
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: 1.5em;
-
 	padding: 0;
 
 }
 
-footer nav:nth-of-type(1) svg {
+footer>nav:first-of-type svg {
 
 	width: 3em;
 	height: 3em;
 
-
 }
 
-
-
-/* verbergen voor chrome en edge*/
+/* verbergen voor chrome en edge */
 details ::marker {
 
 	content: '';
 
 }
 
-/* verbergen voor safari aple */
+/* verbergen voor safari apple */
 details summary::-webkit-details-marker {
+
 	display: none;
+
 }
 
 summary {
+
 	font-weight: var(--font-weight-heavy);
-
 	background-color: var(--color-background);
-
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -516,21 +576,40 @@ summary::after {
 	transition: 1s;
 	font-size: 2em;
 	line-height: 1rem;
-}
 
+}
 
 details[open] summary::after {
+
 	rotate: 45deg;
+
 }
 
-/* footer mobiel media */
+
+
+
+
+
+/****************/
+/* footer tablet */
+/****************/
 @media (width > 38em) {
+
 	footer {
 
 		display: flex;
+		flex-direction: column;
 		gap: 1em;
 
 	}
+
+	footer>nav:first-of-type ul {
+
+		flex-direction: row;
+		gap: 2em;
+
+	}
+
 
 	summary::after {
 
@@ -541,6 +620,78 @@ details[open] summary::after {
 	details::details-content {
 
 		content-visibility: visible;
+
+	}
+}
+
+
+@media (width >=38em) {
+
+	details>nav {
+
+		display: block;
+
+	}
+
+	details summary {
+
+		pointer-events: none;
+		padding: 0;
+		margin-bottom: .75em;
+
+	}
+
+	summary::after {
+
+		content: none;
+
+	}
+
+	/* layout */
+	footer {
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2em;
+
+	}
+
+	footer ul {
+
+		padding: 0;
+		gap: 1em;
+
+	}
+
+	/* eerste rij */
+	footer section {
+
+		grid-column: 1 / 2;
+
+	}
+
+	footer nav:nth-of-type(1) {
+
+		grid-column: 2 / 3;
+
+	}
+
+	/* tweede rij */
+	footer details:nth-of-type(1) {
+
+		grid-column: 1 / 2;
+
+	}
+
+	footer details:nth-of-type(2) {
+
+		grid-column: 2 / 3;
+
+	}
+
+	footer details:nth-of-type(3) {
+
+		grid-column: 1 / -1;
 
 	}
 }

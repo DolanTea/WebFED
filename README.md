@@ -325,6 +325,87 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 
+
+## Herkansing (22-23 januari)
+
+<details>
+  <summary>uitwerken voor eindgesprek</summary>
+  Beter responsive maken:
+  Producten (gedaan)
+  Vacature & foodcorner (gedaan)
+  Nieuwsbrief (gedaan)
+  Footer (gedaan)
+
+  Overig:
+  Search svg sprong in de hamburger menu beter gepositioneerd (gelukt)
+  WCAG kleuren check paar wat ik dacht klopt wit/zwart aanpassen (gedaan)
+  Svg light-dark aan de praat krijgen (gelukt)
+
+  WCAG checklist verbeteringen:
+  skiplink toegevoegd
+  h1 visually hidden
+  aria-label overige a waar nodig
+  horizontal scrolling is weg doordat nieuwsbrief is opgelost
+  alle img alt hebben nu passende alt text
+
+  overig:
+  Hamburger menu tabben (poging gewaagd, niet gelukt)
+  Narrator testen & keyshortcuts
+  Animatie bereidingswijze klaar met alle stappen confetti
+  evt wat surface plane
+
+  ### Je uitkomst - karakteristiek screenshots:
+  gehele screenshot pagina
+
+  desktop & darkmode
+  <img src="readme-images/her-dark-homepagina-desktop.png" width="375px" alt="homepagina amazing oriental darkmode">
+  <img src="readme-images/her-dark-receptpagina-desktop.png" width="375px" alt="receptpagina amazing oriental lightmode">
+
+  mobiel & lightmode
+  <img src="readme-images/her-light-homepagina-mobiel.png" width="375px" alt="homepagina amazing oriental darkmode">
+  <img src="readme-images/her-light-receptpagina-mobiel.png" width="375px" alt="receptpagina amazing oriental lightmode">
+
+  ### Dit ging goed/Heb ik geleerd: 
+  Korte omschrijving met plaatjes
+
+  zoveel nieuwe kennis met code, geen div of spans of classes, veel grid geleerd zoals grid-template-area.
+
+  skiplink toegevoegd
+  <img src="readme-images/her-skiplink.png" width="375px" alt="skiplink die verschijnt bij tab">
+
+  producten eindelijk mooier op het grid gekregen met label korting producten
+  <img src="readme-images/her-producten.png" width="375px" alt="producten met duidelijk label prijzen korting weergave en recht op grid">
+
+  vacature & foodcorner betere scaling gekregen met media queries
+  <img src="readme-images/her-werken-bestellen.png" width="375px" alt="vacature en foodcorner mooier gepositioneerd">
+  
+  WCAG kleuren check nieuwsbrief h2/p veranderd naar zwart ipv wit in beide scenario light-dark
+  nieuwsbrief beter gestyled en scaling gekregen
+  <img src="readme-images/her-nieuwsbrief-footer.png" width="375px" alt="nieuwsbrief beter gescaled en gepositioneerd">
+
+  lightdark svg gekregen
+  <img src="readme-images/her-svg-lightdark.png" width="375px" alt="dark mode heeft nu svg witte kleur">
+
+  <img src="readme-images/her-svg-lightdark-receptpagina.png" width="375px" alt="dark mode heeft nu svg witte kleur receptpagina">
+
+
+
+  ### Dit was lastig/Is niet gelukt:
+  Korte omschrijving met plaatjes
+
+  Hamburger menu tabben (poging gewaagd, niet gelukt)
+  de kennis: display none, transition behavior: allow-discrete; tegen de nav, omdat de smooth dan weg gaat van het openen hamburger menu, dan gaat het van display none naar display block voor het dichtgaan. bij de javascript header nav.ToonMenu @starting-style { translate:-100%}. Niet gelukt toe te passen
+
+
+</details>
+
+
+
+
+
+
+
+
 ## Bronnenlijst
 
 <details open>
@@ -336,6 +417,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   1. [bron 1] png naar svg via (https://convertio.co/nl/download/48d0a7c12c6d98b0e47de04de5fc94033c7342/)
   2. bron 2 alternative svg's (https://icons.getbootstrap.com/?q=mail)
-  3. ...
+  3. Sanne Hooft feedback uren
+  4. OpenAI. (2025, 23 december). Uitleg over het gebruik van -webkit-line-clamp en de standaard line-clamp. Antwoord verkregen via ChatGPT (GPT-4.1).
+  5. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/line-clamp
+  6. ChatGPT. (2025, 23 december). “Vraag over het aanpassen van inline SVG <g> en <path> fill-waarden om light/dark mode te ondersteunen.” OpenAI ChatGPT, GPT-5 mini,
+  (was het niet gelukt light-dark via dit en toen veranderde ik de --color-text bij fill & stroke en ineens deed ie het. Dus prefes-color-scheme niet gelukt maar svg light dark is er nu wel)
+  7. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme
 
 </details>
