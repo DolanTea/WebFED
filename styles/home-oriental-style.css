@@ -202,14 +202,8 @@ main nav:nth-of-type(1) li p {
 
         display: grid;
         gap: 1em;
-
         grid-template-rows: auto;
         grid-template-columns: 1fr 1fr 1fr;
-
-        /* display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1.25em;
-        align-items: stretch; */
 
     }
 
@@ -217,15 +211,13 @@ main nav:nth-of-type(1) li p {
 
         grid-column-start: 1;
         grid-column-end: 4;
-        /* text-align: center; */
+        text-align: center;
 
     }
 
     section:nth-of-type(1)>a {
 
         display: grid;
-        /* display:flex;
-        flex-direction: column; */
         background-color: var(--color-card);
         border-radius: 0.625em 0.625em;
 
@@ -234,23 +226,22 @@ main nav:nth-of-type(1) li p {
     section:nth-of-type(1)>a article {
 
         display: grid;
-        box-shadow: 0 0 1.25em 0 rgba(0, 0, 0, .16)
+        box-shadow: 0 0 1.25em 0 rgba(0, 0, 0, .16);
+
     }
 
     section:nth-of-type(1)>a article img {
 
-        /* deze images scaled niet mee met de grid als de h3 de hele breedte kan nemen */
-        /* width: 100%;
-        object-fit: cover; */
-
         width: 100%;
         height: auto;
+
         align-self: center;
         object-fit: cover;
-        /* de default (inline) van img's overschrijven */
         display: block;
+
         order: -1;
         border-radius: 0.625em 0.625em 0 0;
+
     }
 
     section:nth-of-type(1) a article p {
@@ -260,8 +251,7 @@ main nav:nth-of-type(1) li p {
 
     }
 
-
-    section:nth-of-type(1) a:nth-of-type(4) {
+    section:nth-of-type(1) a:last-of-type {
 
         display: grid;
         grid-column-start: -3;
@@ -269,13 +259,40 @@ main nav:nth-of-type(1) li p {
         justify-self: center;
         max-width: fit-content;
 
-
         border-radius: 1.375em;
         border: 1px solid var(--color-border);
         padding: 0.5625em 1.4375em;
 
     }
 }
+
+@media (max-width:37.95em) {
+    main>section:nth-of-type(1) {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+
+    }
+
+    section:nth-of-type(1)>a {
+
+        width: 100%;
+        max-width: 20em;
+
+    }
+
+    section:nth-of-type(1)>a:last-of-type {
+
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+
+    }
+}
+
 
 
 
@@ -553,17 +570,25 @@ section:nth-of-type(2)>ul+a {
     display: grid;
     grid-column: 1 / -1;
     justify-self: center;
+    max-width: fit-content;
     margin-top: 2em;
 
     border-radius: 1.375em;
     border: 1px solid var(--color-border);
     padding: 0.5625em 1.4375em;
 
-
 }
 
+@media (max-width: 37.95em) {
+    section>ul+a {
 
+        display: grid;
+        place-items: center;
+        width: 100%;
+        text-align: center;
 
+    }
+}
 
 
 
