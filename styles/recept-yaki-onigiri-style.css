@@ -57,9 +57,20 @@ main:focus {
 /* position absolute en relative op main is niet mooi */
 main a:nth-of-type(1) {
 
-    display: flex;
-    align-content: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+    width: fit-content;
 
+}
+
+main a:nth-of-type(1)::after {
+
+    left: auto;
+    right: 0;
+    width: 2.5em;
+    top: 100%;
 }
 
 main a:nth-of-type(1) {
@@ -281,6 +292,7 @@ section:nth-of-type(2) ul li input {
 
     grid-area: 1/1;
     opacity: .1;
+    cursor: pointer;
 
 }
 
@@ -304,7 +316,6 @@ section:nth-of-type(2) ul li:has(input:checked)::before {
 /****************/
 /* Bereidingswijze */
 /****************/
-
 ol {
     margin: 0;
     padding: 0;
@@ -345,6 +356,7 @@ li input {
 
     grid-area: 1/1;
     opacity: .1;
+    cursor: pointer;
 
 }
 
@@ -357,5 +369,70 @@ li:has(input:checked)::before {
 @media (min-width:54em) {
     article>section:nth-of-type(3) {
         grid-area: wijze;
+    }
+}
+
+
+
+
+
+
+/****************/
+/* Confetti checkboxen gevinkt */
+/****************/
+/* animatie codepen oefening van FED les https://codepen.io/DolanTea/pen/ogxMZJG?editors=1100 */
+/* translateX & Y https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function */
+/* OpenAI ChatGPT, GPT-5-mini. (22 januari 2026). Vraag aan ChatGPT over het zichtbaar maken van confetti-emoji
+ bij checkboxen op een receptpagina en het oplossen van te doorzichtige animatie. Geraadpleegd via ChatGPT. */
+input[type="checkbox"] {
+    position: relative;
+}
+
+
+/* Plaats confetti-emoji bij de checkbox als die checked is */
+input[type="checkbox"]:checked::after {
+
+    content: "🎉";
+    position: absolute;
+    left: 50%;
+    top: -1.5em;
+
+    transform: translateX(-50%);
+
+    font-size: 2em;
+    opacity: 1;
+    animation: confetti-fall 1s forwards;
+    pointer-events: none;
+
+}
+
+/* Animatie: omhoog en verdwijnt pas aan het einde */
+@keyframes confetti-fall {
+
+    0% {
+        transform: translateX(-50%) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(-50%) translateY(-2.5em) rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateX(-50%) translateY(-3em) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+/* Reduced motion respecteren */
+@media (prefers-reduced-motion: reduce) {
+    input[type="checkbox"]:checked::after {
+
+        animation: none;
+        opacity: 1;
+
     }
 }

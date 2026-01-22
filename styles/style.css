@@ -29,7 +29,6 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-/* inverse color veroorzaakt overlap */
 :root {
 
 	/* font */
@@ -247,14 +246,19 @@ header search form {
 header search form input {
 
 	width: 100%;
+	height: 2.25em;
+	padding: 0 3.625em 0 0.875em;
+
+	border-radius: 1.375em;
+	border: 1px solid var(--color-border);
 
 }
 
 header search form svg {
 
 	position: absolute;
-	right: 0.3em;
-	top: 0.3em;
+	right: 1em;
+	top: 0.4em;
 
 }
 
@@ -274,9 +278,6 @@ header button {
 	appearance: none;
 	border: none;
 	background-color: var(--color-background-functional);
-
-
-
 
 }
 
@@ -473,6 +474,23 @@ a:is(:hover, :focus-visible)::after {
 	transform-origin: left center;
 }
 
+a:focus-visible {
+
+	outline: 2px solid var(--color-text);
+	outline-offset: .3em;
+	border-radius: .25em;
+
+	position: relative;
+	z-index: 1;
+
+}
+
+input:focus-visible {
+	outline: 2px solid var(--color-black);
+	outline-offset: 0.9em;
+	border-radius: .3em;
+}
+
 /* active */
 a:active {
 	--link-color: var(--accent-color);
@@ -526,6 +544,12 @@ section:nth-of-type(8) {
 
 	display: flex;
 	flex-direction: column;
+
+}
+
+footer section>p>a {
+
+	text-decoration: underline;
 
 }
 
